@@ -103,3 +103,4 @@ wrapt==1.13.3
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
+python-consul==1.1.0

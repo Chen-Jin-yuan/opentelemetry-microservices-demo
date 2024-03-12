@@ -18,22 +18,27 @@ import (
 	"context"
 	"fmt"
 	"github.com/Chen-Jin-yuan/grpc/consul"
+	"github.com/Chen-Jin-yuan/grpc/dialer"
+	"github.com/harlow/go-micro-services/tracing"
+	"github.com/opentracing/opentracing-go"
+	"github.com/pkg/errors"
 	"github.com/google/uuid"
 	"github.com/sirupsen/logrus"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/credentials/insecure"
+	// "google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/status"
 	"net"
 	"os"
 	"strconv"
 	"time"
-
-	"go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
-	"go.opentelemetry.io/otel"
-	"go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc"
-	"go.opentelemetry.io/otel/propagation"
-	sdktrace "go.opentelemetry.io/otel/sdk/trace"
+	"google.golang.org/grpc/keepalive"
+	"github.com/grpc-ecosystem/grpc-opentracing/go/otgrpc"
+	// "go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc"
+	// "go.opentelemetry.io/otel"
+	// "go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc"
+	// "go.opentelemetry.io/otel/propagation"
+	// sdktrace "go.opentelemetry.io/otel/sdk/trace"
 
 	pb "github.com/GoogleCloudPlatform/microservices-demo/src/checkoutservice/genproto/hipstershop"
 	money "github.com/GoogleCloudPlatform/microservices-demo/src/checkoutservice/money"
@@ -45,10 +50,14 @@ const (
 	usdCurrency = "USD"
 	name        = "checkoutservice"
 	consulAddr  = "consul:8500"
+	jaegeraddr = "jaeger:6831"
 )
 
-var log *logrus.Logger
-
+var (
+	log *logrus.Logger
+	registry *consul.Client
+	Tracer   opentracing.Tracer
+)
 func init() {
 	log = logrus.New()
 	log.Level = logrus.DebugLevel
@@ -61,23 +70,34 @@ func init() {
 		TimestampFormat: time.RFC3339Nano,
 	}
 	log.Out = os.Stdout
-}
 
-func InitTracerProvider() *sdktrace.TracerProvider {
-	ctx := context.Background()
-
-	exporter, err := otlptracegrpc.New(ctx)
+	var err error
+	Tracer, err = tracing.Init("checkoutservice", jaegeraddr)
 	if err != nil {
-		log.Fatal(err)
+		log.Errorf("Got error while initializing jaeger agent: %v", err)
 	}
-	tp := sdktrace.NewTracerProvider(
-		sdktrace.WithSampler(sdktrace.AlwaysSample()),
-		sdktrace.WithBatcher(exporter),
-	)
-	otel.SetTracerProvider(tp)
-	otel.SetTextMapPropagator(propagation.NewCompositeTextMapPropagator(propagation.TraceContext{}, propagation.Baggage{}))
-	return tp
+
+	registry, err = consul.NewClient(consulAddr)
+	if err != nil {
+		log.Errorf("got error while initializing consul agent: %v", err)
+	}
 }
+
+// func InitTracerProvider() *sdktrace.TracerProvider {
+// 	ctx := context.Background()
+
+// 	exporter, err := otlptracegrpc.New(ctx)
+// 	if err != nil {
+// 		log.Fatal(err)
+// 	}
+// 	tp := sdktrace.NewTracerProvider(
+// 		sdktrace.WithSampler(sdktrace.AlwaysSample()),
+// 		sdktrace.WithBatcher(exporter),
+// 	)
+// 	otel.SetTracerProvider(tp)
+// 	otel.SetTextMapPropagator(propagation.NewCompositeTextMapPropagator(propagation.TraceContext{}, propagation.Baggage{}))
+// 	return tp
+// }
 
 type checkoutService struct {
 	productCatalogSvcAddr string
@@ -95,12 +115,12 @@ func main() {
 		port = os.Getenv("PORT")
 	}
 
-	tp := InitTracerProvider()
-	defer func() {
-		if err := tp.Shutdown(context.Background()); err != nil {
-			log.Printf("Error shutting down tracer provider: %v", err)
-		}
-	}()
+	// tp := InitTracerProvider()
+	// defer func() {
+	// 	if err := tp.Shutdown(context.Background()); err != nil {
+	// 		log.Printf("Error shutting down tracer provider: %v", err)
+	// 	}
+	// }()
 
 	svc := new(checkoutService)
 	mustMapEnv(&svc.shippingSvcAddr, "SHIPPING_SERVICE_ADDR")
@@ -117,18 +137,27 @@ func main() {
 		log.Fatal(err)
 	}
 
-	var srv *grpc.Server = grpc.NewServer(
-		grpc.UnaryInterceptor(otelgrpc.UnaryServerInterceptor()),
-		grpc.StreamInterceptor(otelgrpc.StreamServerInterceptor()),
-	)
+	opts := []grpc.ServerOption{
+		grpc.KeepaliveParams(keepalive.ServerParameters{
+			Timeout: 120 * time.Second,
+		}),
+		grpc.KeepaliveEnforcementPolicy(keepalive.EnforcementPolicy{
+			PermitWithoutStream: true,
+		}),
+		grpc.UnaryInterceptor(
+			otgrpc.OpenTracingServerInterceptor(Tracer),
+		),
+	}
+
+	var srv *grpc.Server = grpc.NewServer(opts...)
 	pb.RegisterCheckoutServiceServer(srv, svc)
 	healthpb.RegisterHealthServer(srv, svc)
 	log.Infof("starting to listen on tcp: %q", lis.Addr().String())
 
-	registry, err := consul.NewClient(consulAddr)
-	if err != nil {
-		log.Errorf("got error while initializing consul agent: %v", err)
-	}
+	// registry, err := consul.NewClient(consulAddr)
+	// if err != nil {
+	// 	log.Errorf("got error while initializing consul agent: %v", err)
+	// }
 	portInt, _ := strconv.Atoi(port)
 	svcUuid := uuid.New().String()
 	err = registry.Register(name, svcUuid, "", portInt)
@@ -241,10 +270,25 @@ func (cs *checkoutService) prepareOrderItemsAndShippingQuoteFromCart(ctx context
 
 func createClient(ctx context.Context, svcAddr string) (*grpc.ClientConn, error) {
 	return grpc.DialContext(ctx, svcAddr,
-		grpc.WithTransportCredentials(insecure.NewCredentials()),
-		grpc.WithUnaryInterceptor(otelgrpc.UnaryClientInterceptor()),
-		grpc.WithStreamInterceptor(otelgrpc.StreamClientInterceptor()),
+		grpc.WithInsecure())
+	//grpc.WithTransportCredentials(insecure.NewCredentials()),
+	//grpc.WithUnaryInterceptor(otelgrpc.UnaryClientInterceptor()),
+	//grpc.WithStreamInterceptor(otelgrpc.StreamClientInterceptor()),
+}
+
+func createClientNew(ctx context.Context, conn **grpc.ClientConn, addr string) {
+	var err error
+	ctx, cancel := context.WithTimeout(ctx, time.Second*3)
+	defer cancel()
+	*conn, err = dialer.Dial(
+		addr,
+		dialer.WithTracer(Tracer),
+		dialer.WithBalancer(registry, 10001),
+		dialer.WithStatsHandler(),
 	)
+	if err != nil {
+		panic(errors.Wrapf(err, "grpc: failed to connect %s", addr))
+	}
 }
 
 func (cs *checkoutService) quoteShipping(ctx context.Context, address *pb.Address, items []*pb.CartItem) (*pb.Money, error) {

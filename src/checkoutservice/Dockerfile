@@ -21,8 +21,8 @@ WORKDIR /src
 RUN go env -w GO111MODULE=on && \
     go env -w  GOPROXY=https://goproxy.cn,direct
 COPY go.mod go.sum ./
-RUN go mod download
 COPY . .
+RUN go mod download
 
 # Skaffold passes in debug-oriented compiler flags
 ARG SKAFFOLD_GO_GCFLAGS

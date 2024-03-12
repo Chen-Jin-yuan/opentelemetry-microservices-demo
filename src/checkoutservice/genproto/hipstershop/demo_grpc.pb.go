@@ -16,7 +16,7 @@ import (
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
 // Requires gRPC-Go v1.32.0 or later.
-const _ = grpc.SupportPackageIsVersion7
+const _ = grpc.SupportPackageIsVersion6
 
 // CartServiceClient is the client API for CartService service.
 //
@@ -94,7 +94,7 @@ type UnsafeCartServiceServer interface {
 	mustEmbedUnimplementedCartServiceServer()
 }
 
-func RegisterCartServiceServer(s grpc.ServiceRegistrar, srv CartServiceServer) {
+func RegisterCartServiceServer(s *grpc.Server, srv CartServiceServer) {
 	s.RegisterService(&CartService_ServiceDesc, srv)
 }
 
@@ -224,7 +224,7 @@ type UnsafeRecommendationServiceServer interface {
 	mustEmbedUnimplementedRecommendationServiceServer()
 }
 
-func RegisterRecommendationServiceServer(s grpc.ServiceRegistrar, srv RecommendationServiceServer) {
+func RegisterRecommendationServiceServer(s *grpc.Server, srv RecommendationServiceServer) {
 	s.RegisterService(&RecommendationService_ServiceDesc, srv)
 }
 
@@ -338,7 +338,7 @@ type UnsafeProductCatalogServiceServer interface {
 	mustEmbedUnimplementedProductCatalogServiceServer()
 }
 
-func RegisterProductCatalogServiceServer(s grpc.ServiceRegistrar, srv ProductCatalogServiceServer) {
+func RegisterProductCatalogServiceServer(s *grpc.Server, srv ProductCatalogServiceServer) {
 	s.RegisterService(&ProductCatalogService_ServiceDesc, srv)
 }
 
@@ -482,7 +482,7 @@ type UnsafeShippingServiceServer interface {
 	mustEmbedUnimplementedShippingServiceServer()
 }
 
-func RegisterShippingServiceServer(s grpc.ServiceRegistrar, srv ShippingServiceServer) {
+func RegisterShippingServiceServer(s *grpc.Server, srv ShippingServiceServer) {
 	s.RegisterService(&ShippingService_ServiceDesc, srv)
 }
 
@@ -604,7 +604,7 @@ type UnsafeCurrencyServiceServer interface {
 	mustEmbedUnimplementedCurrencyServiceServer()
 }
 
-func RegisterCurrencyServiceServer(s grpc.ServiceRegistrar, srv CurrencyServiceServer) {
+func RegisterCurrencyServiceServer(s *grpc.Server, srv CurrencyServiceServer) {
 	s.RegisterService(&CurrencyService_ServiceDesc, srv)
 }
 
@@ -712,7 +712,7 @@ type UnsafePaymentServiceServer interface {
 	mustEmbedUnimplementedPaymentServiceServer()
 }
 
-func RegisterPaymentServiceServer(s grpc.ServiceRegistrar, srv PaymentServiceServer) {
+func RegisterPaymentServiceServer(s *grpc.Server, srv PaymentServiceServer) {
 	s.RegisterService(&PaymentService_ServiceDesc, srv)
 }
 
@@ -798,7 +798,7 @@ type UnsafeEmailServiceServer interface {
 	mustEmbedUnimplementedEmailServiceServer()
 }
 
-func RegisterEmailServiceServer(s grpc.ServiceRegistrar, srv EmailServiceServer) {
+func RegisterEmailServiceServer(s *grpc.Server, srv EmailServiceServer) {
 	s.RegisterService(&EmailService_ServiceDesc, srv)
 }
 
@@ -884,7 +884,7 @@ type UnsafeCheckoutServiceServer interface {
 	mustEmbedUnimplementedCheckoutServiceServer()
 }
 
-func RegisterCheckoutServiceServer(s grpc.ServiceRegistrar, srv CheckoutServiceServer) {
+func RegisterCheckoutServiceServer(s *grpc.Server, srv CheckoutServiceServer) {
 	s.RegisterService(&CheckoutService_ServiceDesc, srv)
 }
 
@@ -970,7 +970,7 @@ type UnsafeAdServiceServer interface {
 	mustEmbedUnimplementedAdServiceServer()
 }
 
-func RegisterAdServiceServer(s grpc.ServiceRegistrar, srv AdServiceServer) {
+func RegisterAdServiceServer(s *grpc.Server, srv AdServiceServer) {
 	s.RegisterService(&AdService_ServiceDesc, srv)
 }
 

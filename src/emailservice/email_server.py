@@ -35,6 +35,14 @@ from opentelemetry.sdk.trace.export import (BatchSpanProcessor)
 from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
 
 from logger import getJSONLogger
+
+import uuid
+from register import ConsulClient
+
+name = "emailservice"
+consulAddr = "consul"
+consulPort = 8500
+
 logger = getJSONLogger('emailservice-server')
 
 tracer_provider = TracerProvider()
@@ -127,6 +135,11 @@ def start(dummy_mode):
 
   port = os.environ.get('PORT', "8080")
   logger.info("listening on port: "+port)
+
+  consul_client = ConsulClient(consulAddr, consulPort)
+  svc_uuid = str(uuid.uuid4())
+  consul_client.register_service(name=name, id=svc_uuid, port=int(port), ip='')
+
   server.add_insecure_port('[::]:'+port)
   server.start()
   try:

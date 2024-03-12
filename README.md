@@ -147,8 +147,8 @@ curl -X POST -d "email=someone@example.com&street_address=1600 Amphitheatre Park
 * 使用 allocator 的权重分配，下游需要 consul 注册，非共享的有 consul 接口就行
 
 * frontend：**go**，with grpc **1.29.1**，逻辑看看简化
-* emailservice：python，留着，**用 python-consul 接口**
 * checkoutservice：**go**，with grpc **1.44**，需要**降级 grpc 版本**，接入 jaeger
+* emailservice：python，留着，**用 python-consul 接口**
 * recommendationservice：python，**改成go**，因为最大并发度，逻辑简化，把 product 的那个删了
 * currencyservice：javaScript，nodejs，**改 go**
 * cartservice：c#，with redis，**改成 go**，redis 看看有没有 **go 的接口**

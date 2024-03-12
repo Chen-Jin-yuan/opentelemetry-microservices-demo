@@ -1,0 +1,85 @@
+{
+  "productcatalogservice": {
+    "group": {
+      "group1": {
+        "number": 10000
+      }
+    }
+  },
+  "checkoutservice": {
+    "group": {
+      "group1": {
+        "number": 10000
+      }
+    }
+  },
+  "shippingservice": {
+    "group": {
+      "group1": {
+        "number": 10000
+      }
+    }
+  },
+  "recommendationservice": {
+    "group": {
+      "group1": {
+        "number": 10000
+      }
+    }
+  },
+  "srv-profile": {
+    "group": {
+      "group1": {
+        "number": 1,
+        "selector": {
+          "request-type": "recommend"
+        }
+      },
+      "group2": {
+        "number": 1,
+        "selector": {
+          "request-type": "search"
+        }
+      }
+    }
+  },
+  "srv-recommendation": {
+    "group": {
+      "group1": {
+        "number": 10000
+      }
+    }
+  },
+  "srv-user": {
+    "group": {
+      "group1": {
+        "number": 1,
+        "selector": {
+          "request-type": "user"
+        }
+      },
+      "group2": {
+        "number": 1,
+        "selector": {
+          "request-type": "reservation"
+        }
+      }
+    }
+  },
+  "srv-reservation": {
+    "group": {
+      "group1": {
+        "number": 1,
+        "selector": {
+          "request-type": "search"
+        }
+      },
+      "group2": {
+        "number": 1,
+        "selector": {
+          "request-type": "reservation"
+        }
+      }
+    }
+  }
+}

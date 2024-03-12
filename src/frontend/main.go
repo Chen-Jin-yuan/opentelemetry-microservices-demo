@@ -137,12 +137,13 @@ func main() {
 	// mustConnGRPC(ctx, &svc.recommendationSvcConn, svc.recommendationSvcAddr)
 	// mustConnGRPC(ctx, &svc.shippingSvcConn, svc.shippingSvcAddr)
 	// mustConnGRPC(ctx, &svc.checkoutSvcConn, svc.checkoutSvcAddr)
-	mustConnGRPC(ctx, &svc.adSvcConn, svc.adSvcAddr)
+	// mustConnGRPC(ctx, &svc.adSvcConn, svc.adSvcAddr)
 
 	mustConnGRPCNew(ctx, &svc.shippingSvcConn, "shippingservice")
 	mustConnGRPCNew(ctx, &svc.checkoutSvcConn, "checkoutservice")
 	mustConnGRPCNew(ctx, &svc.productCatalogSvcConn, "productcatalogservice")
 	mustConnGRPCNew(ctx, &svc.recommendationSvcConn, "recommendationservice")
+	mustConnGRPCNew(ctx, &svc.adSvcConn, "adservice")
 
 	r := tracing.NewServeMux(Tracer)
 	r.Handle("/", http.HandlerFunc(svc.homeHandler))

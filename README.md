@@ -126,13 +126,13 @@ curl http://10.96.48.250:80/product/1YMWWN1N4O
 
 **viewCart**
 ```
-curl http://10.96.48.250:80/cart
+curl http://10.96.48.250:80/cart/view
 ```
 ![viewCart](./image/viewCart.png)
 
 **addToCart**
 ```
-curl -X POST -d "product_id=0PUK6V6EV0&quantity=3" http://10.96.48.250:80/cart
+curl -X POST -d "product_id=0PUK6V6EV0&quantity=3" http://10.96.48.250:80/cart/add
 ```
 ![addToCart](./image/addToCart.png)
 

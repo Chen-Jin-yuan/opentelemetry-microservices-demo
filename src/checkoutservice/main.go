@@ -100,7 +100,7 @@ func init() {
 // 	return tp
 // }
 
-// 需要服用 conn 创建 client，而不是每次新建一个 conn
+// 需要复用 conn 创建 client，而不是每次新建一个 conn
 type checkoutService struct {
 	productCatalogSvcAddr string
 	productCatalogSvcConn *grpc.ClientConn

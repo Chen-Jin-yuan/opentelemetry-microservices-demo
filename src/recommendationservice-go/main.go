@@ -63,7 +63,6 @@ func init() {
 	}
 
 	initializeDatabase()
-	GetProducts()
 }
 
 // RecommendationService 定义了推荐服务的 gRPC 实现
@@ -118,12 +117,11 @@ func (s *RecommendationService) ListRecommendations(ctx context.Context, req *pb
 	for _, product := range req.ProductIds {
 		productIDs[product] = true
 	}
-	log.Printf("product ids: %v\n", productIDs)
+	log.Printf("product ids: %v\n", req.ProductIds)
 	// 创建一个空的字符串切片用来存储过滤后的产品
 	var filteredProducts []string
 	// 遍历所有产品
 	for _, product := range allProducts {
-		log.Printf("get id: %s\n", product.Id)
 		// 如果产品ID不在请求的产品ID列表中，则将该产品添加到过滤后的产品列表中
 		if !productIDs[product.Id] {
 			filteredProducts = append(filteredProducts, product.Id)
@@ -145,7 +143,7 @@ func (s *RecommendationService) ListRecommendations(ctx context.Context, req *pb
 		prodList = append(prodList, filteredProducts[idx])
 	}
 
-	fmt.Printf("[Recv ListRecommendations] product_ids=%v\n", prodList)
+	log.Printf("[ListRecommendations] product_ids=%v\n", prodList)
 	// 构建并返回响应
 	return &pb.ListRecommendationsResponse{
 		ProductIds: prodList,

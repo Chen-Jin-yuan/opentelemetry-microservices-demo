@@ -48,7 +48,7 @@ class ExpiredCreditCard extends CreditCardError {
     super(`Your credit card (ending ${number.substr(-4)}) expired on ${month}/${year}`);
   }
 }
-
+// TODO：费用信息写入数据库
 /**
  * Verifies the credit card number and (pretend) charges the card.
  *

@@ -175,6 +175,7 @@ type productCatalog struct {
 	pb.UnimplementedProductCatalogServiceServer
 }
 
+// TODO：从 memcache 里读 product
 func readCatalogFile(catalog *pb.ListProductsResponse) error {
 	catalogMutex.Lock()
 	defer catalogMutex.Unlock()

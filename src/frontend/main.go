@@ -26,8 +26,8 @@ import (
 	"github.com/harlow/go-micro-services/tracing"
 	"github.com/pkg/errors"
 
-	"google.golang.org/grpc"
 	"github.com/opentracing/opentracing-go"
+	"google.golang.org/grpc"
 	// "go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc"
 )
 
@@ -133,7 +133,7 @@ func main() {
 
 	mustConnGRPC(ctx, &svc.currencySvcConn, svc.currencySvcAddr)
 	// mustConnGRPC(ctx, &svc.productCatalogSvcConn, svc.productCatalogSvcAddr)
-	mustConnGRPC(ctx, &svc.cartSvcConn, svc.cartSvcAddr)
+	//mustConnGRPC(ctx, &svc.cartSvcConn, svc.cartSvcAddr)
 	// mustConnGRPC(ctx, &svc.recommendationSvcConn, svc.recommendationSvcAddr)
 	// mustConnGRPC(ctx, &svc.shippingSvcConn, svc.shippingSvcAddr)
 	// mustConnGRPC(ctx, &svc.checkoutSvcConn, svc.checkoutSvcAddr)
@@ -144,6 +144,7 @@ func main() {
 	mustConnGRPCNew(ctx, &svc.productCatalogSvcConn, "productcatalogservice")
 	mustConnGRPCNew(ctx, &svc.recommendationSvcConn, "recommendationservice")
 	mustConnGRPCNew(ctx, &svc.adSvcConn, "adservice")
+	mustConnGRPCNew(ctx, &svc.cartSvcConn, "cartservice")
 
 	r := tracing.NewServeMux(Tracer)
 	r.Handle("/", http.HandlerFunc(svc.homeHandler))

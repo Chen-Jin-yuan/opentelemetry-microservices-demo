@@ -139,14 +139,17 @@ func main() {
 	mustMapEnv(&svc.paymentSvcAddr, "PAYMENT_SERVICE_ADDR")
 
 	ctx := context.Background()
-	mustConnGRPC(ctx, &svc.productCatalogSvcConn, svc.productCatalogSvcAddr)
-	mustConnGRPC(ctx, &svc.cartSvcConn, svc.cartSvcAddr)
+	//mustConnGRPC(ctx, &svc.productCatalogSvcConn, svc.productCatalogSvcAddr)
+	//mustConnGRPC(ctx, &svc.cartSvcConn, svc.cartSvcAddr)
 	mustConnGRPC(ctx, &svc.currencySvcConn, svc.currencySvcAddr)
-	mustConnGRPC(ctx, &svc.shippingSvcConn, svc.shippingSvcAddr)
-// 	mustConnGRPC(ctx, &svc.emailSvcConn, svc.emailSvcAddr)
+	//mustConnGRPC(ctx, &svc.shippingSvcConn, svc.shippingSvcAddr)
+	// 	mustConnGRPC(ctx, &svc.emailSvcConn, svc.emailSvcAddr)
 	mustConnGRPC(ctx, &svc.paymentSvcConn, svc.paymentSvcAddr)
 
 	mustConnGRPCNew(ctx, &svc.emailSvcConn, "emailservice")
+	mustConnGRPCNew(ctx, &svc.cartSvcConn, "cartservice")
+	mustConnGRPCNew(ctx, &svc.shippingSvcConn, "shippingservice")
+	mustConnGRPCNew(ctx, &svc.productCatalogSvcConn, "productcatalogservice")
 
 	log.Infof("service config: %+v", svc)
 

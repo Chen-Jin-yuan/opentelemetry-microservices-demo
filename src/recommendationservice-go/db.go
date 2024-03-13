@@ -24,7 +24,7 @@ type Product struct {
 
 func initializeDatabase() {
 	// 读取product.json文件
-	file, err := os.Open("product.json")
+	file, err := os.Open("products.json")
 	if err != nil {
 		log.Fatalf("Error opening product.json file: %v", err)
 	}

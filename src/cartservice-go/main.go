@@ -31,8 +31,18 @@ var (
 	Tracer   opentracing.Tracer
 )
 
-func main() {
-	port := listenPort
+func init() {
+	log = logrus.New()
+	log.Level = logrus.DebugLevel
+	log.Formatter = &logrus.JSONFormatter{
+		FieldMap: logrus.FieldMap{
+			logrus.FieldKeyTime:  "timestamp",
+			logrus.FieldKeyLevel: "severity",
+			logrus.FieldKeyMsg:   "message",
+		},
+		TimestampFormat: time.RFC3339Nano,
+	}
+	log.Out = os.Stdout
 
 	var err error
 	Tracer, err = tracing.Init("checkoutservice", jaegeraddr)
@@ -44,6 +54,10 @@ func main() {
 	if err != nil {
 		log.Errorf("got error while initializing consul agent: %v", err)
 	}
+}
+
+func main() {
+	port := listenPort
 
 	// Configure Redis client
 	redisAddress := os.Getenv("REDIS_ADDR")

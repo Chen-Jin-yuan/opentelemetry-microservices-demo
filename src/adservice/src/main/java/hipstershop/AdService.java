@@ -35,6 +35,8 @@ import java.util.Random;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import java.util.UUID;
+import hipstershop.ConsulClient;
 
 public final class AdService {
 
@@ -48,9 +50,18 @@ public final class AdService {
 
   private static final AdService service = new AdService();
 
+  public static final String NAME = "adservice";
+  public static final String CONSUL_ADDR = "consul";
+  public static final int CONSUL_PORT = 8500;
+  public ConsulClient client = new ConsulClient(CONSUL_ADDR, CONSUL_PORT);
   private void start() throws IOException {
     int port = Integer.parseInt(System.getenv().getOrDefault("PORT", "9555"));
     healthMgr = new HealthStatusManager();
+
+    
+    UUID svcUuid = UUID.randomUUID();
+    String svcUuidStr = svcUuid.toString();
+    client.registerService(NAME, svcUuidStr, port, "");
 
     server =
         ServerBuilder.forPort(port)
@@ -75,6 +86,7 @@ public final class AdService {
   private void stop() {
     if (server != null) {
       healthMgr.clearStatus("");
+      client.deregisterService(NAME);
       server.shutdown();
     }
   }

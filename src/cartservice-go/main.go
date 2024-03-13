@@ -15,6 +15,7 @@ import (
 	"os"
 	"strconv"
 	"time"
+	"tracing"
 )
 
 const (
@@ -32,6 +33,17 @@ var (
 
 func main() {
 	port := listenPort
+
+	var err error
+	Tracer, err = tracing.Init("checkoutservice", jaegeraddr)
+	if err != nil {
+		log.Errorf("Got error while initializing jaeger agent: %v", err)
+	}
+
+	registry, err = consul.NewClient(consulAddr)
+	if err != nil {
+		log.Errorf("got error while initializing consul agent: %v", err)
+	}
 
 	// Configure Redis client
 	redisAddress := os.Getenv("REDIS_ADDR")

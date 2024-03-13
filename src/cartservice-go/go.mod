@@ -1,8 +1,12 @@
 module main
 
-go 1.21.1
+go 1.21.3
+
+toolchain go1.21.5
 
 replace hipstershop => ./genproto/hipstershop
+
+replace tracing => ./tracing
 
 require (
 	github.com/Chen-Jin-yuan/grpc/consul v1.0.3
@@ -14,6 +18,7 @@ require (
 	google.golang.org/grpc v1.29.1
 	google.golang.org/protobuf v1.33.0
 	hipstershop v0.0.0-00010101000000-000000000000
+	tracing v0.0.0-00010101000000-000000000000
 )
 
 require (
@@ -33,7 +38,12 @@ require (
 	github.com/mattn/go-isatty v0.0.19 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
+	github.com/opentracing-contrib/go-stdlib v1.0.0 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
 	github.com/rs/zerolog v1.31.0 // indirect
+	github.com/uber/jaeger-client-go v2.30.0+incompatible // indirect
+	github.com/uber/jaeger-lib v2.4.1+incompatible // indirect
+	go.uber.org/atomic v1.11.0 // indirect
 	golang.org/x/exp v0.0.0-20230321023759-10a507213a29 // indirect
 	golang.org/x/net v0.20.0 // indirect
 	golang.org/x/sys v0.16.0 // indirect

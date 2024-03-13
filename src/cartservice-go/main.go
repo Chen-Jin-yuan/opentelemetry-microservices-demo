@@ -69,6 +69,11 @@ func main() {
 	}
 
 	redisStore := NewRedisCartStore(redisAddress)
+	err := redisStore.InitializeAsync(
+	if err != nil {
+		log.Fatal(err)
+	}
+	
 	svc := NewCartService(redisStore)
 
 	lis, err := net.Listen("tcp", fmt.Sprintf(":%s", port))

@@ -143,7 +143,7 @@ func (s *RecommendationService) ListRecommendations(ctx context.Context, req *pb
 		prodList = append(prodList, filteredProducts[idx])
 	}
 
-	log.Printf("[ListRecommendations] product_ids=%v\n", prodList)
+	//log.Printf("[ListRecommendations] product_ids=%v\n", prodList)
 	// 构建并返回响应
 	return &pb.ListRecommendationsResponse{
 		ProductIds: prodList,

@@ -176,7 +176,6 @@ func (fe *frontendServer) productHandler(w http.ResponseWriter, r *http.Request)
 	}
 
 	recommendations, err := fe.getRecommendations(r.Context(), sessionID(r), []string{id})
-	fmt.Printf("id: %s, rec: %v", id, recommendations)
 	if err != nil {
 		renderHTTPError(log, r, w, errors.Wrap(err, "failed to get product recommendations"), http.StatusInternalServerError)
 		return

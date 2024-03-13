@@ -98,7 +98,7 @@ func GetProducts() []*pb.Product {
 	}
 
 	// 输出读取到的产品数量
-	log.Printf("Read %d products from MongoDB\n", len(products))
+	//log.Printf("Read %d products from MongoDB\n", len(products))
 
 	return products
 }
@@ -117,7 +117,7 @@ func (s *RecommendationService) ListRecommendations(ctx context.Context, req *pb
 	for _, product := range req.ProductIds {
 		productIDs[product] = true
 	}
-	log.Printf("product ids: %v\n", req.ProductIds)
+
 	// 创建一个空的字符串切片用来存储过滤后的产品
 	var filteredProducts []string
 	// 遍历所有产品

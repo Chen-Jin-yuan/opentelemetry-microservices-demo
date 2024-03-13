@@ -2,10 +2,10 @@ package main
 
 import (
 	"context"
-	"encoding/json"
 	"errors"
 	"fmt"
 	"github.com/redis/go-redis/v9"
+	"google.golang.org/protobuf/proto"
 	pb "hipstershop"
 	"sync"
 )
@@ -24,7 +24,7 @@ type RedisCartStore struct {
 func NewRedisCartStore(redisAddress string) *RedisCartStore {
 	// Serialize empty cart into byte array.
 	cart := &pb.Cart{}
-	emptyCartBytes, _ := json.Marshal(cart)
+	emptyCartBytes, _ := proto.Marshal(cart)
 
 	rdb := redis.NewClient(&redis.Options{
 		Addr:     redisAddress,
@@ -59,7 +59,7 @@ func (r *RedisCartStore) AddItemAsync(userId, productId string, quantity int32) 
 	}
 
 	cart := &pb.Cart{}
-	if err := json.Unmarshal(value, cart); err != nil && !errors.Is(err, redis.Nil) {
+	if err := proto.Unmarshal(value, cart); err != nil && !errors.Is(err, redis.Nil) {
 		return fmt.Errorf("failed to unmarshal cart data: %w", err)
 	}
 
@@ -122,7 +122,7 @@ func (r *RedisCartStore) GetCartAsync(userId string) (*pb.Cart, error) {
 	}
 
 	cart := &pb.Cart{}
-	if err := json.Unmarshal(value, cart); err != nil && !errors.Is(err, redis.Nil) {
+	if err := proto.Unmarshal(value, cart); err != nil && !errors.Is(err, redis.Nil) {
 		return nil, fmt.Errorf("failed to unmarshal cart data: %w", err)
 	}
 

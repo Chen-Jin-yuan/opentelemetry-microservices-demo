@@ -52,7 +52,7 @@ func initializeDatabase() {
 
 	// 选择数据库和集合
 	db := session.DB("recommendationservice-db")
-	collection := db.C("products")
+	collection = db.C("products")
 
 	// 插入数据到MongoDB
 	for _, product := range data["products"] {

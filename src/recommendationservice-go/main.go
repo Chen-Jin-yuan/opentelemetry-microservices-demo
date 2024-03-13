@@ -9,6 +9,8 @@ import (
 	"github.com/opentracing/opentracing-go"
 	"github.com/sirupsen/logrus"
 	"google.golang.org/grpc/keepalive"
+	"gopkg.in/mgo.v2"
+	"gopkg.in/mgo.v2/bson"
 	"math/rand"
 	"net"
 	"os"
@@ -29,9 +31,10 @@ const (
 )
 
 var (
-	log      *logrus.Logger
-	registry *consul.Client
-	Tracer   opentracing.Tracer
+	log        *logrus.Logger
+	registry   *consul.Client
+	Tracer     opentracing.Tracer
+	collection *mgo.Collection
 )
 
 func init() {
@@ -60,6 +63,7 @@ func init() {
 	}
 
 	initializeDatabase()
+	GetProducts()
 }
 
 // RecommendationService 定义了推荐服务的 gRPC 实现
@@ -67,14 +71,46 @@ type RecommendationService struct {
 	pb.UnimplementedRecommendationServiceServer
 }
 
+func GetProducts() []*pb.Product {
+	// 查询MongoDB集合中的所有文档
+	var mongoProducts []Product
+	err := collection.Find(bson.M{}).All(&mongoProducts)
+	if err != nil {
+		log.Fatalf("Error querying MongoDB collection: %v", err)
+	}
+
+	// 将MongoDB产品转换为pb.Product类型并添加到切片中
+	var products []*pb.Product
+	for _, mp := range mongoProducts {
+		priceUsd := &pb.Money{
+			CurrencyCode: mp.PriceUsd.CurrencyCode,
+			Units:        mp.PriceUsd.Units,
+			Nanos:        mp.PriceUsd.Nanos,
+		}
+		product := &pb.Product{
+			Id:          mp.Id,
+			Name:        mp.Name,
+			Description: mp.Description,
+			Picture:     mp.Picture,
+			PriceUsd:    priceUsd,
+			Categories:  mp.Categories,
+		}
+		products = append(products, product)
+	}
+
+	// 输出读取到的产品数量
+	log.Printf("Read %d products from MongoDB\n: %v\n", len(products), products)
+
+	return products
+}
+
 // ListRecommendations 是 ListRecommendations gRPC 方法的实现
 func (s *RecommendationService) ListRecommendations(ctx context.Context, req *pb.ListRecommendationsRequest) (*pb.ListRecommendationsResponse, error) {
 	// 最大返回数量
 	maxResponses := 3
 
-	// TODO：从数据库中获取产品列表
 	// TODO: 每个用户推荐的是不一样的数据
-	products := make([]*pb.Product, 0)
+	products := GetProducts()
 
 	// 创建一个映射用来存储产品ID的布尔值
 	productIDs := make(map[string]bool)

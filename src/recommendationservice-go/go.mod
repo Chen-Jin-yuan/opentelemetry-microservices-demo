@@ -13,7 +13,6 @@ require (
 	github.com/google/uuid v1.6.0
 	github.com/grpc-ecosystem/grpc-opentracing v0.0.0-20180507213350-8e809c8a8645
 	github.com/opentracing/opentracing-go v1.2.0
-	github.com/rs/zerolog v1.31.0
 	github.com/sirupsen/logrus v1.9.3
 	google.golang.org/grpc v1.29.1
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22
@@ -38,6 +37,7 @@ require (
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/opentracing-contrib/go-stdlib v1.0.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
+	github.com/rs/zerolog v1.31.0 // indirect
 	github.com/uber/jaeger-client-go v2.30.0+incompatible // indirect
 	github.com/uber/jaeger-lib v2.4.1+incompatible // indirect
 	go.uber.org/atomic v1.11.0 // indirect

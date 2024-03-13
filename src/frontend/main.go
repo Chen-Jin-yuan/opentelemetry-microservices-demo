@@ -148,7 +148,7 @@ func main() {
 
 	r := tracing.NewServeMux(Tracer)
 	r.Handle("/", http.HandlerFunc(svc.homeHandler))
-	r.Handle("/product/{id}", http.HandlerFunc(svc.productHandler))
+	r.Handle("/product", http.HandlerFunc(svc.productHandler))
 	r.Handle("/cart/view", http.HandlerFunc(svc.viewCartHandler))
 	r.Handle("/cart/add", http.HandlerFunc(svc.addToCartHandler))
 	r.Handle("/cart/empty", http.HandlerFunc(svc.emptyCartHandler))

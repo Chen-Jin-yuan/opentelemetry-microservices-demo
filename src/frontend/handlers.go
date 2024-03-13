@@ -26,7 +26,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/gorilla/mux"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 
@@ -145,7 +144,7 @@ func (plat *platformDetails) setPlatformDetails(env string) {
 
 func (fe *frontendServer) productHandler(w http.ResponseWriter, r *http.Request) {
 	log := r.Context().Value(ctxKeyLog{}).(logrus.FieldLogger)
-	id := mux.Vars(r)["id"]
+	id := r.URL.Query().Get("id")
 	if id == "" {
 		renderHTTPError(log, r, w, errors.New("product id not specified"), http.StatusBadRequest)
 		return

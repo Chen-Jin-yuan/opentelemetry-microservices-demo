@@ -48,7 +48,6 @@ func initializeDatabase() {
 	if err != nil {
 		log.Fatalf("Error creating MongoDB session: %v", err)
 	}
-	defer session.Close()
 
 	// 选择数据库和集合
 	db := session.DB("recommendationservice-db")

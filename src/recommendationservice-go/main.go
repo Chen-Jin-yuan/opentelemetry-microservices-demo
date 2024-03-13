@@ -99,7 +99,7 @@ func GetProducts() []*pb.Product {
 	}
 
 	// 输出读取到的产品数量
-	log.Printf("Read %d products from MongoDB\n: %v\n", len(products), products)
+	log.Printf("Read %d products from MongoDB\n", len(products))
 
 	return products
 }
@@ -110,7 +110,7 @@ func (s *RecommendationService) ListRecommendations(ctx context.Context, req *pb
 	maxResponses := 3
 
 	// TODO: 每个用户推荐的是不一样的数据
-	products := GetProducts()
+	allProducts := GetProducts()
 
 	// 创建一个映射用来存储产品ID的布尔值
 	productIDs := make(map[string]bool)
@@ -118,11 +118,12 @@ func (s *RecommendationService) ListRecommendations(ctx context.Context, req *pb
 	for _, product := range req.ProductIds {
 		productIDs[product] = true
 	}
-
+	log.Printf("product ids: %v\n", productIDs)
 	// 创建一个空的字符串切片用来存储过滤后的产品
 	var filteredProducts []string
 	// 遍历所有产品
-	for _, product := range products {
+	for _, product := range allProducts {
+		log.Printf("get id: %s\n", product.Id)
 		// 如果产品ID不在请求的产品ID列表中，则将该产品添加到过滤后的产品列表中
 		if !productIDs[product.Id] {
 			filteredProducts = append(filteredProducts, product.Id)

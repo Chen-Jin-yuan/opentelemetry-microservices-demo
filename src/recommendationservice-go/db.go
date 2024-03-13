@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/json"
+	"gopkg.in/mgo.v2/bson"
 	"os"
 
 	"gopkg.in/mgo.v2"
@@ -55,7 +56,19 @@ func initializeDatabase() {
 
 	// 插入数据到MongoDB
 	for _, product := range data["products"] {
-		err := collection.Insert(product)
+		// 检查是否已存在相同的Id
+		count, err := collection.Find(bson.M{"id": product.Id}).Count()
+		if err != nil {
+			log.Printf("Error checking for existing product %s: %v", product.Id, err)
+			continue
+		}
+		if count > 0 {
+			log.Printf("Product %s already exists, skipping insertion", product.Id)
+			continue
+		}
+
+		// 插入新产品
+		err = collection.Insert(product)
 		if err != nil {
 			log.Printf("Error inserting product %s: %v", product.Id, err)
 		} else {

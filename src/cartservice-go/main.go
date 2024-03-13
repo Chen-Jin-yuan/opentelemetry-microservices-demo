@@ -45,7 +45,7 @@ func init() {
 	log.Out = os.Stdout
 
 	var err error
-	Tracer, err = tracing.Init("checkoutservice", jaegeraddr)
+	Tracer, err = tracing.Init("cartservice", jaegeraddr)
 	if err != nil {
 		log.Errorf("Got error while initializing jaeger agent: %v", err)
 	}

@@ -88,7 +88,8 @@ func (r *RedisCartStore) AddItemAsync(userId, productId string, quantity int32) 
 		existingItem.Quantity += int32(quantity)
 	}
 
-	err = r.redis.HSet(ctx, userId, r.CART_FIELD_NAME, cart).Err()
+	cartBytes, _ := proto.Marshal(cart)
+	err = r.redis.HSet(ctx, userId, r.CART_FIELD_NAME, cartBytes).Err()
 	if err != nil {
 		return fmt.Errorf("failed to update cart in storage: %w", err)
 	}

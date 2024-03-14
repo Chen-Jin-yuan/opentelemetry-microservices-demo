@@ -77,7 +77,6 @@ func init() {
 	//	log.Warnf("could not parse product catalog")
 	//}
 	initializeDatabase()
-	GetProducts()
 }
 
 func InitTracerProvider() *sdktrace.TracerProvider {
@@ -204,7 +203,7 @@ func GetProducts() []*pb.Product {
 	}
 
 	// 输出读取到的产品数量
-	log.Printf("Read %d products from MongoDB\n", len(products))
+	//log.Printf("Read %d products from MongoDB\n", len(products))
 
 	return products
 }

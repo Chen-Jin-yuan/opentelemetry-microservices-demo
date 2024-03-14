@@ -114,7 +114,7 @@
             "description": "Description of Product 1",
             "picture": "/static/img/products/product-1.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 80,
                 "nanos": 437995837
             },
@@ -129,7 +129,7 @@
             "description": "Description of Product 2",
             "picture": "/static/img/products/product-2.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 33,
                 "nanos": 877354979
             },
@@ -144,7 +144,7 @@
             "description": "Description of Product 3",
             "picture": "/static/img/products/product-3.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 47,
                 "nanos": 620894566
             },
@@ -159,7 +159,7 @@
             "description": "Description of Product 4",
             "picture": "/static/img/products/product-4.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 28,
                 "nanos": 476282007
             },
@@ -174,7 +174,7 @@
             "description": "Description of Product 5",
             "picture": "/static/img/products/product-5.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 77,
                 "nanos": 106447092
             },
@@ -189,7 +189,7 @@
             "description": "Description of Product 6",
             "picture": "/static/img/products/product-6.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 2,
                 "nanos": 161258567
             },
@@ -204,7 +204,7 @@
             "description": "Description of Product 7",
             "picture": "/static/img/products/product-7.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 35,
                 "nanos": 771860126
             },
@@ -219,7 +219,7 @@
             "description": "Description of Product 8",
             "picture": "/static/img/products/product-8.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 90,
                 "nanos": 248537136
             },
@@ -234,7 +234,7 @@
             "description": "Description of Product 9",
             "picture": "/static/img/products/product-9.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 48,
                 "nanos": 997204555
             },
@@ -249,7 +249,7 @@
             "description": "Description of Product 10",
             "picture": "/static/img/products/product-10.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 1,
                 "nanos": 241927356
             },
@@ -264,7 +264,7 @@
             "description": "Description of Product 11",
             "picture": "/static/img/products/product-11.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 23,
                 "nanos": 526933323
             },
@@ -279,7 +279,7 @@
             "description": "Description of Product 12",
             "picture": "/static/img/products/product-12.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 59,
                 "nanos": 409353464
             },
@@ -294,7 +294,7 @@
             "description": "Description of Product 13",
             "picture": "/static/img/products/product-13.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 76,
                 "nanos": 924686446
             },
@@ -309,7 +309,7 @@
             "description": "Description of Product 14",
             "picture": "/static/img/products/product-14.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 19,
                 "nanos": 35549437
             },
@@ -324,7 +324,7 @@
             "description": "Description of Product 15",
             "picture": "/static/img/products/product-15.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 48,
                 "nanos": 443873588
             },
@@ -339,7 +339,7 @@
             "description": "Description of Product 16",
             "picture": "/static/img/products/product-16.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 3,
                 "nanos": 260225911
             },
@@ -354,7 +354,7 @@
             "description": "Description of Product 17",
             "picture": "/static/img/products/product-17.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 44,
                 "nanos": 731641956
             },
@@ -369,7 +369,7 @@
             "description": "Description of Product 18",
             "picture": "/static/img/products/product-18.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 1,
                 "nanos": 773447642
             },
@@ -384,7 +384,7 @@
             "description": "Description of Product 19",
             "picture": "/static/img/products/product-19.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 31,
                 "nanos": 526404149
             },
@@ -399,7 +399,7 @@
             "description": "Description of Product 20",
             "picture": "/static/img/products/product-20.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 5,
                 "nanos": 137056261
             },
@@ -414,7 +414,7 @@
             "description": "Description of Product 21",
             "picture": "/static/img/products/product-21.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 50,
                 "nanos": 261893490
             },
@@ -429,7 +429,7 @@
             "description": "Description of Product 22",
             "picture": "/static/img/products/product-22.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 10,
                 "nanos": 441896610
             },
@@ -444,7 +444,7 @@
             "description": "Description of Product 23",
             "picture": "/static/img/products/product-23.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 2,
                 "nanos": 184245031
             },
@@ -459,7 +459,7 @@
             "description": "Description of Product 24",
             "picture": "/static/img/products/product-24.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 29,
                 "nanos": 2122816
             },
@@ -474,7 +474,7 @@
             "description": "Description of Product 25",
             "picture": "/static/img/products/product-25.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 71,
                 "nanos": 650486516
             },
@@ -489,7 +489,7 @@
             "description": "Description of Product 26",
             "picture": "/static/img/products/product-26.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 22,
                 "nanos": 389493574
             },
@@ -504,7 +504,7 @@
             "description": "Description of Product 27",
             "picture": "/static/img/products/product-27.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 61,
                 "nanos": 670636778
             },
@@ -519,7 +519,7 @@
             "description": "Description of Product 28",
             "picture": "/static/img/products/product-28.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 15,
                 "nanos": 26879798
             },
@@ -534,7 +534,7 @@
             "description": "Description of Product 29",
             "picture": "/static/img/products/product-29.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 80,
                 "nanos": 543221493
             },
@@ -549,7 +549,7 @@
             "description": "Description of Product 30",
             "picture": "/static/img/products/product-30.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 86,
                 "nanos": 502369937
             },
@@ -564,7 +564,7 @@
             "description": "Description of Product 31",
             "picture": "/static/img/products/product-31.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 6,
                 "nanos": 500375487
             },
@@ -579,7 +579,7 @@
             "description": "Description of Product 32",
             "picture": "/static/img/products/product-32.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 66,
                 "nanos": 524384163
             },
@@ -594,7 +594,7 @@
             "description": "Description of Product 33",
             "picture": "/static/img/products/product-33.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 53,
                 "nanos": 522152739
             },
@@ -609,7 +609,7 @@
             "description": "Description of Product 34",
             "picture": "/static/img/products/product-34.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 66,
                 "nanos": 197321344
             },
@@ -624,7 +624,7 @@
             "description": "Description of Product 35",
             "picture": "/static/img/products/product-35.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 62,
                 "nanos": 412342725
             },
@@ -639,7 +639,7 @@
             "description": "Description of Product 36",
             "picture": "/static/img/products/product-36.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 45,
                 "nanos": 371259458
             },
@@ -654,7 +654,7 @@
             "description": "Description of Product 37",
             "picture": "/static/img/products/product-37.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 70,
                 "nanos": 536105292
             },
@@ -669,7 +669,7 @@
             "description": "Description of Product 38",
             "picture": "/static/img/products/product-38.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 97,
                 "nanos": 917546120
             },
@@ -684,7 +684,7 @@
             "description": "Description of Product 39",
             "picture": "/static/img/products/product-39.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 63,
                 "nanos": 996565329
             },
@@ -699,7 +699,7 @@
             "description": "Description of Product 40",
             "picture": "/static/img/products/product-40.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 80,
                 "nanos": 67068978
             },
@@ -714,7 +714,7 @@
             "description": "Description of Product 41",
             "picture": "/static/img/products/product-41.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 9,
                 "nanos": 448907550
             },
@@ -729,7 +729,7 @@
             "description": "Description of Product 42",
             "picture": "/static/img/products/product-42.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 82,
                 "nanos": 862460995
             },
@@ -744,7 +744,7 @@
             "description": "Description of Product 43",
             "picture": "/static/img/products/product-43.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 28,
                 "nanos": 911150764
             },
@@ -759,7 +759,7 @@
             "description": "Description of Product 44",
             "picture": "/static/img/products/product-44.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 64,
                 "nanos": 418895869
             },
@@ -774,7 +774,7 @@
             "description": "Description of Product 45",
             "picture": "/static/img/products/product-45.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 63,
                 "nanos": 99485904
             },
@@ -789,7 +789,7 @@
             "description": "Description of Product 46",
             "picture": "/static/img/products/product-46.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 35,
                 "nanos": 500983589
             },
@@ -804,7 +804,7 @@
             "description": "Description of Product 47",
             "picture": "/static/img/products/product-47.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 15,
                 "nanos": 776701499
             },
@@ -819,7 +819,7 @@
             "description": "Description of Product 48",
             "picture": "/static/img/products/product-48.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 47,
                 "nanos": 91169403
             },
@@ -834,7 +834,7 @@
             "description": "Description of Product 49",
             "picture": "/static/img/products/product-49.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 83,
                 "nanos": 636471140
             },
@@ -849,7 +849,7 @@
             "description": "Description of Product 50",
             "picture": "/static/img/products/product-50.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 50,
                 "nanos": 918961114
             },
@@ -864,7 +864,7 @@
             "description": "Description of Product 51",
             "picture": "/static/img/products/product-51.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 97,
                 "nanos": 236085898
             },
@@ -879,7 +879,7 @@
             "description": "Description of Product 52",
             "picture": "/static/img/products/product-52.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 85,
                 "nanos": 949491109
             },
@@ -894,7 +894,7 @@
             "description": "Description of Product 53",
             "picture": "/static/img/products/product-53.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 18,
                 "nanos": 84275080
             },
@@ -909,7 +909,7 @@
             "description": "Description of Product 54",
             "picture": "/static/img/products/product-54.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 18,
                 "nanos": 239933777
             },
@@ -924,7 +924,7 @@
             "description": "Description of Product 55",
             "picture": "/static/img/products/product-55.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 4,
                 "nanos": 989576021
             },
@@ -939,7 +939,7 @@
             "description": "Description of Product 56",
             "picture": "/static/img/products/product-56.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 37,
                 "nanos": 48729843
             },
@@ -954,7 +954,7 @@
             "description": "Description of Product 57",
             "picture": "/static/img/products/product-57.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 51,
                 "nanos": 319444419
             },
@@ -969,7 +969,7 @@
             "description": "Description of Product 58",
             "picture": "/static/img/products/product-58.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 52,
                 "nanos": 372742745
             },
@@ -984,7 +984,7 @@
             "description": "Description of Product 59",
             "picture": "/static/img/products/product-59.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 81,
                 "nanos": 282290698
             },
@@ -999,7 +999,7 @@
             "description": "Description of Product 60",
             "picture": "/static/img/products/product-60.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 46,
                 "nanos": 214114531
             },
@@ -1014,7 +1014,7 @@
             "description": "Description of Product 61",
             "picture": "/static/img/products/product-61.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 48,
                 "nanos": 172318207
             },
@@ -1029,7 +1029,7 @@
             "description": "Description of Product 62",
             "picture": "/static/img/products/product-62.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 47,
                 "nanos": 508734042
             },
@@ -1044,7 +1044,7 @@
             "description": "Description of Product 63",
             "picture": "/static/img/products/product-63.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 33,
                 "nanos": 683396026
             },
@@ -1059,7 +1059,7 @@
             "description": "Description of Product 64",
             "picture": "/static/img/products/product-64.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 32,
                 "nanos": 727092179
             },
@@ -1074,7 +1074,7 @@
             "description": "Description of Product 65",
             "picture": "/static/img/products/product-65.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 89,
                 "nanos": 361391471
             },
@@ -1089,7 +1089,7 @@
             "description": "Description of Product 66",
             "picture": "/static/img/products/product-66.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 80,
                 "nanos": 485175200
             },
@@ -1104,7 +1104,7 @@
             "description": "Description of Product 67",
             "picture": "/static/img/products/product-67.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 46,
                 "nanos": 307110291
             },
@@ -1119,7 +1119,7 @@
             "description": "Description of Product 68",
             "picture": "/static/img/products/product-68.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 4,
                 "nanos": 525906938
             },
@@ -1134,7 +1134,7 @@
             "description": "Description of Product 69",
             "picture": "/static/img/products/product-69.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 42,
                 "nanos": 215760383
             },
@@ -1149,7 +1149,7 @@
             "description": "Description of Product 70",
             "picture": "/static/img/products/product-70.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 24,
                 "nanos": 918438349
             },
@@ -1164,7 +1164,7 @@
             "description": "Description of Product 71",
             "picture": "/static/img/products/product-71.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 68,
                 "nanos": 411699465
             },
@@ -1179,7 +1179,7 @@
             "description": "Description of Product 72",
             "picture": "/static/img/products/product-72.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 68,
                 "nanos": 896139257
             },
@@ -1194,7 +1194,7 @@
             "description": "Description of Product 73",
             "picture": "/static/img/products/product-73.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 61,
                 "nanos": 436760121
             },
@@ -1209,7 +1209,7 @@
             "description": "Description of Product 74",
             "picture": "/static/img/products/product-74.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 41,
                 "nanos": 938677148
             },
@@ -1224,7 +1224,7 @@
             "description": "Description of Product 75",
             "picture": "/static/img/products/product-75.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 65,
                 "nanos": 164524287
             },
@@ -1239,7 +1239,7 @@
             "description": "Description of Product 76",
             "picture": "/static/img/products/product-76.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 19,
                 "nanos": 909578817
             },
@@ -1254,7 +1254,7 @@
             "description": "Description of Product 77",
             "picture": "/static/img/products/product-77.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 46,
                 "nanos": 362595259
             },
@@ -1269,7 +1269,7 @@
             "description": "Description of Product 78",
             "picture": "/static/img/products/product-78.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 10,
                 "nanos": 841852074
             },
@@ -1284,7 +1284,7 @@
             "description": "Description of Product 79",
             "picture": "/static/img/products/product-79.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 16,
                 "nanos": 302502024
             },
@@ -1299,7 +1299,7 @@
             "description": "Description of Product 80",
             "picture": "/static/img/products/product-80.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 82,
                 "nanos": 995050402
             },
@@ -1314,7 +1314,7 @@
             "description": "Description of Product 81",
             "picture": "/static/img/products/product-81.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 97,
                 "nanos": 502898624
             },
@@ -1329,7 +1329,7 @@
             "description": "Description of Product 82",
             "picture": "/static/img/products/product-82.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 46,
                 "nanos": 266373324
             },
@@ -1344,7 +1344,7 @@
             "description": "Description of Product 83",
             "picture": "/static/img/products/product-83.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 29,
                 "nanos": 637627090
             },
@@ -1359,7 +1359,7 @@
             "description": "Description of Product 84",
             "picture": "/static/img/products/product-84.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 40,
                 "nanos": 753631324
             },
@@ -1374,7 +1374,7 @@
             "description": "Description of Product 85",
             "picture": "/static/img/products/product-85.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 24,
                 "nanos": 476056149
             },
@@ -1389,7 +1389,7 @@
             "description": "Description of Product 86",
             "picture": "/static/img/products/product-86.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 65,
                 "nanos": 406816553
             },
@@ -1404,7 +1404,7 @@
             "description": "Description of Product 87",
             "picture": "/static/img/products/product-87.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 88,
                 "nanos": 143627666
             },
@@ -1419,7 +1419,7 @@
             "description": "Description of Product 88",
             "picture": "/static/img/products/product-88.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 2,
                 "nanos": 315052544
             },
@@ -1434,7 +1434,7 @@
             "description": "Description of Product 89",
             "picture": "/static/img/products/product-89.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 81,
                 "nanos": 983396705
             },
@@ -1449,7 +1449,7 @@
             "description": "Description of Product 90",
             "picture": "/static/img/products/product-90.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 64,
                 "nanos": 121892374
             },
@@ -1464,7 +1464,7 @@
             "description": "Description of Product 91",
             "picture": "/static/img/products/product-91.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 39,
                 "nanos": 471738807
             },
@@ -1479,7 +1479,7 @@
             "description": "Description of Product 92",
             "picture": "/static/img/products/product-92.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 14,
                 "nanos": 659161652
             },
@@ -1494,7 +1494,7 @@
             "description": "Description of Product 93",
             "picture": "/static/img/products/product-93.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 93,
                 "nanos": 347302928
             },
@@ -1509,7 +1509,7 @@
             "description": "Description of Product 94",
             "picture": "/static/img/products/product-94.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 75,
                 "nanos": 14028813
             },
@@ -1524,7 +1524,7 @@
             "description": "Description of Product 95",
             "picture": "/static/img/products/product-95.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 12,
                 "nanos": 389683673
             },
@@ -1539,7 +1539,7 @@
             "description": "Description of Product 96",
             "picture": "/static/img/products/product-96.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 67,
                 "nanos": 66314890
             },
@@ -1554,7 +1554,7 @@
             "description": "Description of Product 97",
             "picture": "/static/img/products/product-97.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 72,
                 "nanos": 555712112
             },
@@ -1569,7 +1569,7 @@
             "description": "Description of Product 98",
             "picture": "/static/img/products/product-98.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 2,
                 "nanos": 249998422
             },
@@ -1584,7 +1584,7 @@
             "description": "Description of Product 99",
             "picture": "/static/img/products/product-99.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 24,
                 "nanos": 223491570
             },
@@ -1599,7 +1599,7 @@
             "description": "Description of Product 100",
             "picture": "/static/img/products/product-100.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 91,
                 "nanos": 904798158
             },
@@ -1614,7 +1614,7 @@
             "description": "Description of Product 101",
             "picture": "/static/img/products/product-101.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 84,
                 "nanos": 828297584
             },
@@ -1629,7 +1629,7 @@
             "description": "Description of Product 102",
             "picture": "/static/img/products/product-102.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 21,
                 "nanos": 241614202
             },
@@ -1644,7 +1644,7 @@
             "description": "Description of Product 103",
             "picture": "/static/img/products/product-103.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 18,
                 "nanos": 365469541
             },
@@ -1659,7 +1659,7 @@
             "description": "Description of Product 104",
             "picture": "/static/img/products/product-104.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 4,
                 "nanos": 428101235
             },
@@ -1674,7 +1674,7 @@
             "description": "Description of Product 105",
             "picture": "/static/img/products/product-105.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 36,
                 "nanos": 291917381
             },
@@ -1689,7 +1689,7 @@
             "description": "Description of Product 106",
             "picture": "/static/img/products/product-106.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 91,
                 "nanos": 752878736
             },
@@ -1704,7 +1704,7 @@
             "description": "Description of Product 107",
             "picture": "/static/img/products/product-107.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 78,
                 "nanos": 483098365
             },
@@ -1719,7 +1719,7 @@
             "description": "Description of Product 108",
             "picture": "/static/img/products/product-108.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 13,
                 "nanos": 138883766
             },
@@ -1734,7 +1734,7 @@
             "description": "Description of Product 109",
             "picture": "/static/img/products/product-109.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 23,
                 "nanos": 896167724
             },
@@ -1749,7 +1749,7 @@
             "description": "Description of Product 110",
             "picture": "/static/img/products/product-110.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 50,
                 "nanos": 149713088
             },
@@ -1764,7 +1764,7 @@
             "description": "Description of Product 111",
             "picture": "/static/img/products/product-111.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 14,
                 "nanos": 570227330
             },
@@ -1779,7 +1779,7 @@
             "description": "Description of Product 112",
             "picture": "/static/img/products/product-112.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 42,
                 "nanos": 788205275
             },
@@ -1794,7 +1794,7 @@
             "description": "Description of Product 113",
             "picture": "/static/img/products/product-113.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 67,
                 "nanos": 313588571
             },
@@ -1809,7 +1809,7 @@
             "description": "Description of Product 114",
             "picture": "/static/img/products/product-114.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 93,
                 "nanos": 509335024
             },
@@ -1824,7 +1824,7 @@
             "description": "Description of Product 115",
             "picture": "/static/img/products/product-115.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 99,
                 "nanos": 592761954
             },
@@ -1839,7 +1839,7 @@
             "description": "Description of Product 116",
             "picture": "/static/img/products/product-116.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 47,
                 "nanos": 932495719
             },
@@ -1854,7 +1854,7 @@
             "description": "Description of Product 117",
             "picture": "/static/img/products/product-117.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 42,
                 "nanos": 124110856
             },
@@ -1869,7 +1869,7 @@
             "description": "Description of Product 118",
             "picture": "/static/img/products/product-118.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 100,
                 "nanos": 494356934
             },
@@ -1884,7 +1884,7 @@
             "description": "Description of Product 119",
             "picture": "/static/img/products/product-119.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 59,
                 "nanos": 487187365
             },
@@ -1899,7 +1899,7 @@
             "description": "Description of Product 120",
             "picture": "/static/img/products/product-120.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 66,
                 "nanos": 752269161
             },
@@ -1914,7 +1914,7 @@
             "description": "Description of Product 121",
             "picture": "/static/img/products/product-121.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 98,
                 "nanos": 57649420
             },
@@ -1929,7 +1929,7 @@
             "description": "Description of Product 122",
             "picture": "/static/img/products/product-122.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 38,
                 "nanos": 876382940
             },
@@ -1944,7 +1944,7 @@
             "description": "Description of Product 123",
             "picture": "/static/img/products/product-123.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 24,
                 "nanos": 707709643
             },
@@ -1959,7 +1959,7 @@
             "description": "Description of Product 124",
             "picture": "/static/img/products/product-124.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 81,
                 "nanos": 511129145
             },
@@ -1974,7 +1974,7 @@
             "description": "Description of Product 125",
             "picture": "/static/img/products/product-125.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 84,
                 "nanos": 105992045
             },
@@ -1989,7 +1989,7 @@
             "description": "Description of Product 126",
             "picture": "/static/img/products/product-126.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 6,
                 "nanos": 866312830
             },
@@ -2004,7 +2004,7 @@
             "description": "Description of Product 127",
             "picture": "/static/img/products/product-127.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 80,
                 "nanos": 294010769
             },
@@ -2019,7 +2019,7 @@
             "description": "Description of Product 128",
             "picture": "/static/img/products/product-128.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 19,
                 "nanos": 20112942
             },
@@ -2034,7 +2034,7 @@
             "description": "Description of Product 129",
             "picture": "/static/img/products/product-129.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 27,
                 "nanos": 16739258
             },
@@ -2049,7 +2049,7 @@
             "description": "Description of Product 130",
             "picture": "/static/img/products/product-130.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 59,
                 "nanos": 309728081
             },
@@ -2064,7 +2064,7 @@
             "description": "Description of Product 131",
             "picture": "/static/img/products/product-131.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 45,
                 "nanos": 148525056
             },
@@ -2079,7 +2079,7 @@
             "description": "Description of Product 132",
             "picture": "/static/img/products/product-132.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 26,
                 "nanos": 431625573
             },
@@ -2094,7 +2094,7 @@
             "description": "Description of Product 133",
             "picture": "/static/img/products/product-133.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 69,
                 "nanos": 824531853
             },
@@ -2109,7 +2109,7 @@
             "description": "Description of Product 134",
             "picture": "/static/img/products/product-134.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 83,
                 "nanos": 637442661
             },
@@ -2124,7 +2124,7 @@
             "description": "Description of Product 135",
             "picture": "/static/img/products/product-135.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 72,
                 "nanos": 451305493
             },
@@ -2139,7 +2139,7 @@
             "description": "Description of Product 136",
             "picture": "/static/img/products/product-136.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 93,
                 "nanos": 263189473
             },
@@ -2154,7 +2154,7 @@
             "description": "Description of Product 137",
             "picture": "/static/img/products/product-137.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 23,
                 "nanos": 822390958
             },
@@ -2169,7 +2169,7 @@
             "description": "Description of Product 138",
             "picture": "/static/img/products/product-138.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 94,
                 "nanos": 108242972
             },
@@ -2184,7 +2184,7 @@
             "description": "Description of Product 139",
             "picture": "/static/img/products/product-139.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 37,
                 "nanos": 63470773
             },
@@ -2199,7 +2199,7 @@
             "description": "Description of Product 140",
             "picture": "/static/img/products/product-140.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 81,
                 "nanos": 199115265
             },
@@ -2214,7 +2214,7 @@
             "description": "Description of Product 141",
             "picture": "/static/img/products/product-141.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 75,
                 "nanos": 136653632
             },
@@ -2229,7 +2229,7 @@
             "description": "Description of Product 142",
             "picture": "/static/img/products/product-142.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 79,
                 "nanos": 402562290
             },
@@ -2244,7 +2244,7 @@
             "description": "Description of Product 143",
             "picture": "/static/img/products/product-143.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 78,
                 "nanos": 619019417
             },
@@ -2259,7 +2259,7 @@
             "description": "Description of Product 144",
             "picture": "/static/img/products/product-144.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 51,
                 "nanos": 68828555
             },
@@ -2274,7 +2274,7 @@
             "description": "Description of Product 145",
             "picture": "/static/img/products/product-145.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 37,
                 "nanos": 350568583
             },
@@ -2289,7 +2289,7 @@
             "description": "Description of Product 146",
             "picture": "/static/img/products/product-146.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 46,
                 "nanos": 983609254
             },
@@ -2304,7 +2304,7 @@
             "description": "Description of Product 147",
             "picture": "/static/img/products/product-147.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 88,
                 "nanos": 658186936
             },
@@ -2319,7 +2319,7 @@
             "description": "Description of Product 148",
             "picture": "/static/img/products/product-148.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 98,
                 "nanos": 888188151
             },
@@ -2334,7 +2334,7 @@
             "description": "Description of Product 149",
             "picture": "/static/img/products/product-149.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 18,
                 "nanos": 551139623
             },
@@ -2349,7 +2349,7 @@
             "description": "Description of Product 150",
             "picture": "/static/img/products/product-150.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 82,
                 "nanos": 924355876
             },
@@ -2364,7 +2364,7 @@
             "description": "Description of Product 151",
             "picture": "/static/img/products/product-151.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 69,
                 "nanos": 271161702
             },
@@ -2379,7 +2379,7 @@
             "description": "Description of Product 152",
             "picture": "/static/img/products/product-152.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 64,
                 "nanos": 813667556
             },
@@ -2394,7 +2394,7 @@
             "description": "Description of Product 153",
             "picture": "/static/img/products/product-153.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 67,
                 "nanos": 60152383
             },
@@ -2409,7 +2409,7 @@
             "description": "Description of Product 154",
             "picture": "/static/img/products/product-154.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 53,
                 "nanos": 712148059
             },
@@ -2424,7 +2424,7 @@
             "description": "Description of Product 155",
             "picture": "/static/img/products/product-155.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 57,
                 "nanos": 874132027
             },
@@ -2439,7 +2439,7 @@
             "description": "Description of Product 156",
             "picture": "/static/img/products/product-156.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 1,
                 "nanos": 221813249
             },
@@ -2454,7 +2454,7 @@
             "description": "Description of Product 157",
             "picture": "/static/img/products/product-157.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 86,
                 "nanos": 640595819
             },
@@ -2469,7 +2469,7 @@
             "description": "Description of Product 158",
             "picture": "/static/img/products/product-158.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 48,
                 "nanos": 66837537
             },
@@ -2484,7 +2484,7 @@
             "description": "Description of Product 159",
             "picture": "/static/img/products/product-159.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 59,
                 "nanos": 968057628
             },
@@ -2499,7 +2499,7 @@
             "description": "Description of Product 160",
             "picture": "/static/img/products/product-160.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 25,
                 "nanos": 258271929
             },
@@ -2514,7 +2514,7 @@
             "description": "Description of Product 161",
             "picture": "/static/img/products/product-161.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 72,
                 "nanos": 725974588
             },
@@ -2529,7 +2529,7 @@
             "description": "Description of Product 162",
             "picture": "/static/img/products/product-162.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 5,
                 "nanos": 513464768
             },
@@ -2544,7 +2544,7 @@
             "description": "Description of Product 163",
             "picture": "/static/img/products/product-163.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 86,
                 "nanos": 463055992
             },
@@ -2559,7 +2559,7 @@
             "description": "Description of Product 164",
             "picture": "/static/img/products/product-164.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 33,
                 "nanos": 586135573
             },
@@ -2574,7 +2574,7 @@
             "description": "Description of Product 165",
             "picture": "/static/img/products/product-165.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 20,
                 "nanos": 320293203
             },
@@ -2589,7 +2589,7 @@
             "description": "Description of Product 166",
             "picture": "/static/img/products/product-166.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 76,
                 "nanos": 401864312
             },
@@ -2604,7 +2604,7 @@
             "description": "Description of Product 167",
             "picture": "/static/img/products/product-167.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 42,
                 "nanos": 244727673
             },
@@ -2619,7 +2619,7 @@
             "description": "Description of Product 168",
             "picture": "/static/img/products/product-168.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 41,
                 "nanos": 594678158
             },
@@ -2634,7 +2634,7 @@
             "description": "Description of Product 169",
             "picture": "/static/img/products/product-169.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 80,
                 "nanos": 941264228
             },
@@ -2649,7 +2649,7 @@
             "description": "Description of Product 170",
             "picture": "/static/img/products/product-170.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 43,
                 "nanos": 428451497
             },
@@ -2664,7 +2664,7 @@
             "description": "Description of Product 171",
             "picture": "/static/img/products/product-171.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 17,
                 "nanos": 977214722
             },
@@ -2679,7 +2679,7 @@
             "description": "Description of Product 172",
             "picture": "/static/img/products/product-172.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 86,
                 "nanos": 177480517
             },
@@ -2694,7 +2694,7 @@
             "description": "Description of Product 173",
             "picture": "/static/img/products/product-173.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 1,
                 "nanos": 547471907
             },
@@ -2709,7 +2709,7 @@
             "description": "Description of Product 174",
             "picture": "/static/img/products/product-174.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 23,
                 "nanos": 907443734
             },
@@ -2724,7 +2724,7 @@
             "description": "Description of Product 175",
             "picture": "/static/img/products/product-175.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 74,
                 "nanos": 742294400
             },
@@ -2739,7 +2739,7 @@
             "description": "Description of Product 176",
             "picture": "/static/img/products/product-176.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 44,
                 "nanos": 569976284
             },
@@ -2754,7 +2754,7 @@
             "description": "Description of Product 177",
             "picture": "/static/img/products/product-177.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 62,
                 "nanos": 520204392
             },
@@ -2769,7 +2769,7 @@
             "description": "Description of Product 178",
             "picture": "/static/img/products/product-178.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 5,
                 "nanos": 807000408
             },
@@ -2784,7 +2784,7 @@
             "description": "Description of Product 179",
             "picture": "/static/img/products/product-179.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 91,
                 "nanos": 617213549
             },
@@ -2799,7 +2799,7 @@
             "description": "Description of Product 180",
             "picture": "/static/img/products/product-180.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 18,
                 "nanos": 980376630
             },
@@ -2814,7 +2814,7 @@
             "description": "Description of Product 181",
             "picture": "/static/img/products/product-181.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 4,
                 "nanos": 312696632
             },
@@ -2829,7 +2829,7 @@
             "description": "Description of Product 182",
             "picture": "/static/img/products/product-182.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 72,
                 "nanos": 585977871
             },
@@ -2844,7 +2844,7 @@
             "description": "Description of Product 183",
             "picture": "/static/img/products/product-183.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 93,
                 "nanos": 964341016
             },
@@ -2859,7 +2859,7 @@
             "description": "Description of Product 184",
             "picture": "/static/img/products/product-184.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 68,
                 "nanos": 98030392
             },
@@ -2874,7 +2874,7 @@
             "description": "Description of Product 185",
             "picture": "/static/img/products/product-185.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 29,
                 "nanos": 181174625
             },
@@ -2889,7 +2889,7 @@
             "description": "Description of Product 186",
             "picture": "/static/img/products/product-186.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 71,
                 "nanos": 357976166
             },
@@ -2904,7 +2904,7 @@
             "description": "Description of Product 187",
             "picture": "/static/img/products/product-187.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 80,
                 "nanos": 926992669
             },
@@ -2919,7 +2919,7 @@
             "description": "Description of Product 188",
             "picture": "/static/img/products/product-188.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 29,
                 "nanos": 197130598
             },
@@ -2934,7 +2934,7 @@
             "description": "Description of Product 189",
             "picture": "/static/img/products/product-189.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 39,
                 "nanos": 850495670
             },
@@ -2949,7 +2949,7 @@
             "description": "Description of Product 190",
             "picture": "/static/img/products/product-190.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 32,
                 "nanos": 45371193
             },
@@ -2964,7 +2964,7 @@
             "description": "Description of Product 191",
             "picture": "/static/img/products/product-191.jpg",
             "price_usd": {
-                "currency_code": "USD",
+                "currencyCode": "USD",
                 "units": 59,
                 "nanos": 516766520
             },

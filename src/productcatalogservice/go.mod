@@ -17,6 +17,7 @@ require (
 	github.com/google/uuid v1.1.2
 	go.opentelemetry.io/otel/sdk v1.4.1
 	google.golang.org/protobuf v1.31.0
+	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22
 )
 
 require (

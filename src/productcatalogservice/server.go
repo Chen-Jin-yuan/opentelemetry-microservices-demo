@@ -20,12 +20,12 @@ import (
 	"fmt"
 	"github.com/Chen-Jin-yuan/grpc/consul"
 	"github.com/google/uuid"
-	"io/ioutil"
+	"gopkg.in/mgo.v2"
+	"gopkg.in/mgo.v2/bson"
 	"net"
 	"os"
 	"strconv"
 	"strings"
-	"sync"
 	"time"
 
 	pb "github.com/GoogleCloudPlatform/microservices-demo/src/productcatalogservice/genproto/hipstershop"
@@ -40,8 +40,6 @@ import (
 	"go.opentelemetry.io/otel/propagation"
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
 
-	"google.golang.org/protobuf/encoding/protojson"
-
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -51,14 +49,15 @@ const name = "productcatalogservice"
 const consulAddr = "consul:8500"
 
 var (
-	cat          pb.ListProductsResponse
-	catalogMutex *sync.Mutex
+	//cat          pb.ListProductsResponse
+	//catalogMutex *sync.Mutex
 	log          *logrus.Logger
 	extraLatency time.Duration
+	collection   *mgo.Collection
 
 	port = "3550"
 
-	reloadCatalog bool
+	//reloadCatalog bool
 )
 
 func init() {
@@ -72,11 +71,12 @@ func init() {
 		TimestampFormat: time.RFC3339Nano,
 	}
 	log.Out = os.Stdout
-	catalogMutex = &sync.Mutex{}
-	err := readCatalogFile(&cat)
-	if err != nil {
-		log.Warnf("could not parse product catalog")
-	}
+	//catalogMutex = &sync.Mutex{}
+	//err := readCatalogFile(&cat)
+	//if err != nil {
+	//	log.Warnf("could not parse product catalog")
+	//}
+	initializeDatabase()
 }
 
 func InitTracerProvider() *sdktrace.TracerProvider {
@@ -175,32 +175,65 @@ type productCatalog struct {
 	pb.UnimplementedProductCatalogServiceServer
 }
 
-// TODO: 从数据库里读 product
-func readCatalogFile(catalog *pb.ListProductsResponse) error {
-	catalogMutex.Lock()
-	defer catalogMutex.Unlock()
-	catalogJSON, err := ioutil.ReadFile("products.json")
+func GetProducts() []*pb.Product {
+	// 查询MongoDB集合中的所有文档
+	var mongoProducts []Product
+	err := collection.Find(bson.M{}).All(&mongoProducts)
 	if err != nil {
-		log.Fatalf("failed to open product catalog json file: %v", err)
-		return err
+		log.Fatalf("Error querying MongoDB collection: %v", err)
 	}
-	if err := protojson.Unmarshal(catalogJSON, catalog); err != nil {
-		log.Warnf("failed to parse the catalog JSON: %v", err)
-		return err
+
+	// 将MongoDB产品转换为pb.Product类型并添加到切片中
+	var products []*pb.Product
+	for _, mp := range mongoProducts {
+		priceUsd := &pb.Money{
+			CurrencyCode: mp.PriceUsd.CurrencyCode,
+			Units:        mp.PriceUsd.Units,
+			Nanos:        mp.PriceUsd.Nanos,
+		}
+		product := &pb.Product{
+			Id:          mp.Id,
+			Name:        mp.Name,
+			Description: mp.Description,
+			Picture:     mp.Picture,
+			PriceUsd:    priceUsd,
+			Categories:  mp.Categories,
+		}
+		products = append(products, product)
 	}
-	log.Info("successfully parsed product catalog json")
-	return nil
+
+	// 输出读取到的产品数量
+	log.Printf("Read %d products from MongoDB\n", len(products))
+
+	return products
 }
 
-func parseCatalog() []*pb.Product {
-	if reloadCatalog || len(cat.Products) == 0 {
-		err := readCatalogFile(&cat)
-		if err != nil {
-			return []*pb.Product{}
-		}
-	}
-	return cat.Products
-}
+// replace: 从数据库里读 product
+//func readCatalogFile(catalog *pb.ListProductsResponse) error {
+//	catalogMutex.Lock()
+//	defer catalogMutex.Unlock()
+//	catalogJSON, err := ioutil.ReadFile("products.json")
+//	if err != nil {
+//		log.Fatalf("failed to open product catalog json file: %v", err)
+//		return err
+//	}
+//	if err := protojson.Unmarshal(catalogJSON, catalog); err != nil {
+//		log.Warnf("failed to parse the catalog JSON: %v", err)
+//		return err
+//	}
+//	log.Info("successfully parsed product catalog json")
+//	return nil
+//}
+//
+//func parseCatalog() []*pb.Product {
+//	if reloadCatalog || len(cat.Products) == 0 {
+//		err := readCatalogFile(&cat)
+//		if err != nil {
+//			return []*pb.Product{}
+//		}
+//	}
+//	return cat.Products
+//}
 
 func (p *productCatalog) Check(ctx context.Context, req *healthpb.HealthCheckRequest) (*healthpb.HealthCheckResponse, error) {
 	return &healthpb.HealthCheckResponse{Status: healthpb.HealthCheckResponse_SERVING}, nil
@@ -212,15 +245,16 @@ func (p *productCatalog) Watch(req *healthpb.HealthCheckRequest, ws healthpb.Hea
 
 func (p *productCatalog) ListProducts(context.Context, *pb.Empty) (*pb.ListProductsResponse, error) {
 	time.Sleep(extraLatency)
-	return &pb.ListProductsResponse{Products: parseCatalog()}, nil
+	return &pb.ListProductsResponse{Products: GetProducts()}, nil
 }
 
 func (p *productCatalog) GetProduct(ctx context.Context, req *pb.GetProductRequest) (*pb.Product, error) {
 	time.Sleep(extraLatency)
 	var found *pb.Product
-	for i := 0; i < len(parseCatalog()); i++ {
-		if req.Id == parseCatalog()[i].Id {
-			found = parseCatalog()[i]
+	products := GetProducts()
+	for i := 0; i < len(products); i++ {
+		if req.Id == products[i].Id {
+			found = products[i]
 		}
 	}
 	if found == nil {
@@ -233,7 +267,7 @@ func (p *productCatalog) SearchProducts(ctx context.Context, req *pb.SearchProdu
 	time.Sleep(extraLatency)
 	// Intepret query as a substring match in name or description.
 	var ps []*pb.Product
-	for _, p := range parseCatalog() {
+	for _, p := range GetProducts() {
 		if strings.Contains(strings.ToLower(p.Name), strings.ToLower(req.Query)) ||
 			strings.Contains(strings.ToLower(p.Description), strings.ToLower(req.Query)) {
 			ps = append(ps, p)

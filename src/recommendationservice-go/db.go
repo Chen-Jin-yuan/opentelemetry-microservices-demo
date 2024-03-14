@@ -9,7 +9,7 @@ import (
 )
 
 type Money struct {
-	CurrencyCode string `json:"currency_code" bson:"currency_code"`
+	CurrencyCode string `json:"currencyCode" bson:"currencyCode"`
 	Units        int64  `json:"units" bson:"units"`
 	Nanos        int32  `json:"nanos" bson:"nanos"`
 }
@@ -19,7 +19,7 @@ type Product struct {
 	Name        string   `json:"name" bson:"name"`
 	Description string   `json:"description" bson:"description"`
 	Picture     string   `json:"picture" bson:"picture"`
-	PriceUsd    *Money   `json:"priceUsd" bson:"price_usd"`
+	PriceUsd    *Money   `json:"priceUsd" bson:"priceUsd"`
 	Categories  []string `json:"categories" bson:"categories"`
 }
 

@@ -225,6 +225,7 @@ func (fe *frontendServer) addToCartHandler(w http.ResponseWriter, r *http.Reques
 		renderHTTPError(log, r, w, errors.Wrap(err, "failed to add to cart"), http.StatusInternalServerError)
 		return
 	}
+	// 会转到 /cart/view
 	//w.Header().Set("location", "/cart/view")
 	w.WriteHeader(http.StatusFound)
 }

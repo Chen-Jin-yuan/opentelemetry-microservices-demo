@@ -41,7 +41,7 @@ type platformDetails struct {
 var (
 	isCymbalBrand = strings.ToLower(os.Getenv("CYMBAL_BRANDING")) == "true"
 	templates     = template.Must(template.New("").
-		Funcs(template.FuncMap{
+			Funcs(template.FuncMap{
 			"renderMoney":        renderMoney,
 			"renderCurrencyLogo": renderCurrencyLogo,
 		}).ParseGlob("templates/*.html"))
@@ -225,7 +225,7 @@ func (fe *frontendServer) addToCartHandler(w http.ResponseWriter, r *http.Reques
 		renderHTTPError(log, r, w, errors.Wrap(err, "failed to add to cart"), http.StatusInternalServerError)
 		return
 	}
-	w.Header().Set("location", "/cart/view")
+	//w.Header().Set("location", "/cart/view")
 	w.WriteHeader(http.StatusFound)
 }
 

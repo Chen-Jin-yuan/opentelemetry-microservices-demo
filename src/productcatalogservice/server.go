@@ -203,7 +203,7 @@ func GetProducts() []*pb.Product {
 	}
 
 	// 输出读取到的产品数量
-	log.Printf("Read %d products from MongoDB\n", len(products))
+	//log.Printf("Read %d products from MongoDB\n", len(products))
 
 	return products
 }
@@ -251,6 +251,7 @@ func (p *productCatalog) ListProducts(context.Context, *pb.Empty) (*pb.ListProdu
 func (p *productCatalog) GetProduct(ctx context.Context, req *pb.GetProductRequest) (*pb.Product, error) {
 	time.Sleep(extraLatency)
 	var found *pb.Product
+	// 可以直接从数据库查询 id
 	products := GetProducts()
 	for i := 0; i < len(products); i++ {
 		if req.Id == products[i].Id {

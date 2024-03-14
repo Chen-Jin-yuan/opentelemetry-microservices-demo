@@ -225,9 +225,14 @@ func (fe *frontendServer) addToCartHandler(w http.ResponseWriter, r *http.Reques
 		renderHTTPError(log, r, w, errors.Wrap(err, "failed to add to cart"), http.StatusInternalServerError)
 		return
 	}
-	// 会转到 /cart/view
+	// 会转到 /cart/view，从而导致访问一次 /cart/view
 	//w.Header().Set("location", "/cart/view")
-	w.WriteHeader(http.StatusFound)
+	//w.WriteHeader(http.StatusFound)
+
+	// 返回空页面
+	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+	// 设置状态码为200
+	w.WriteHeader(http.StatusOK)
 }
 
 func (fe *frontendServer) emptyCartHandler(w http.ResponseWriter, r *http.Request) {

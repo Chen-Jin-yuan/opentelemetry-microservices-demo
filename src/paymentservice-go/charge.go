@@ -86,7 +86,7 @@ func ChargeHandler(request *pb.ChargeRequest) (*pb.ChargeResponse, error) {
 
 	// 生成随机的交易ID（UUID v4）
 	transactionID := uuid.New().String()
-
+	log.Printf("valid card: %s, card type: %s", creditCard.CreditCardNumber, cardType)
 	// 返回交易ID
 	return &pb.ChargeResponse{TransactionId: transactionID}, nil
 }

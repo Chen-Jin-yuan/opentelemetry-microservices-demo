@@ -30,15 +30,14 @@ func isCreditCard(card string) (bool, string) {
 	for cardType, regex := range cards {
 		if regex.MatchString(sanitized) {
 			// 如果信用卡号与任何一个预定义的正则表达式匹配成功，使用 Luhn 算法验证信用卡号的校验位，以确保最后一位校验码有效
-			return isLuhnValid(card), cardType
+			return isLuhnValid(sanitized), cardType
 		}
 	}
 	// 如果未匹配任何预定义的正则表达式，则返回 false 表示信用卡号无效
 	return false, "unknown"
 }
 
-func isLuhnValid(str string) bool {
-	sanitized := strings.ReplaceAll(str, "[- ]+", "")
+func isLuhnValid(sanitized string) bool {
 	sum := 0
 	shouldDouble := false
 	for i := len(sanitized) - 1; i >= 0; i-- {

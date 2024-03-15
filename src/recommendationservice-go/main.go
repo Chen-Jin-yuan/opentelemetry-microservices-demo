@@ -106,7 +106,7 @@ func GetProducts() []*pb.Product {
 // ListRecommendations 是 ListRecommendations gRPC 方法的实现
 func (s *RecommendationService) ListRecommendations(ctx context.Context, req *pb.ListRecommendationsRequest) (*pb.ListRecommendationsResponse, error) {
 	// 最大返回数量
-	maxResponses := 3
+	maxResponses := 2
 
 	// TODO: 每个用户推荐的是不一样的数据
 	allProducts := GetProducts()

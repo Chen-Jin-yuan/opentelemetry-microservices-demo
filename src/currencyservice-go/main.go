@@ -70,7 +70,7 @@ func loadCurrencyData() {
 		return
 	}
 
-	currencyData := make(map[string]float64)
+	currencyData = make(map[string]float64)
 
 	data, err := ioutil.ReadFile("data/currency_conversion.json")
 	if err != nil {

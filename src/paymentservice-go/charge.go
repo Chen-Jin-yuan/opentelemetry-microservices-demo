@@ -86,7 +86,31 @@ func ChargeHandler(request *pb.ChargeRequest) (*pb.ChargeResponse, error) {
 
 	// 生成随机的交易ID（UUID v4）
 	transactionID := uuid.New().String()
-	log.Printf("valid card: %s, card type: %s", creditCard.CreditCardNumber, cardType)
+
+	// 构造要插入 MongoDB 的数据
+	transaction := Transaction{
+		CreditCardNumber:          creditCard.CreditCardNumber,
+		CreditCardType:            cardType,
+		CreditCardExpirationYear:  creditCard.CreditCardExpirationYear,
+		CreditCardExpirationMonth: creditCard.CreditCardExpirationMonth,
+		TransactionID:             transactionID,
+		TransactionAmount: &Money{
+			CurrencyCode: request.Amount.CurrencyCode,
+			Units:        request.Amount.Units,
+			Nanos:        request.Amount.Nanos,
+		},
+		Timestamp: time.Now(),
+	}
+
+	// 将数据插入 MongoDB
+	if err := collection.Insert(transaction); err != nil {
+		log.Printf("Error inserting data into MongoDB: %v", err)
+		return nil, err
+	}
+
+	// test
+	readAndPrintDataFromDB()
+
 	// 返回交易ID
 	return &pb.ChargeResponse{TransactionId: transactionID}, nil
 }

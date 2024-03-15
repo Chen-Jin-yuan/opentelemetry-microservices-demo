@@ -57,6 +57,7 @@ func init() {
 	if err != nil {
 		log.Errorf("got error while initializing consul agent: %v", err)
 	}
+	initializeDatabase()
 }
 
 // PaymentService 实现了 PaymentService 服务

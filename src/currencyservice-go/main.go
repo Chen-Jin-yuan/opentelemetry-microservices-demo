@@ -131,10 +131,6 @@ func (s *CurrencyService) Convert(ctx context.Context, in *pb.CurrencyConversion
 	resultUnits, resultNanos := carry(eurosUnits*currencyData[toCode],
 		euroNanos*currencyData[toCode])
 
-	// 打印详细日志信息
-	log.Printf("Conversion from %s to %s: Units=%f, Nanos=%f => Units=%f, Nanos=%f",
-		from.CurrencyCode, toCode, fromUnits, fromNanos, resultUnits, resultNanos)
-
 	return &pb.Money{
 		CurrencyCode: toCode,
 		Units:        int64(math.Floor(resultUnits)),
@@ -155,9 +151,6 @@ func (s *CurrencyService) Watch(req *healthpb.HealthCheckRequest, srv healthpb.H
 }
 
 func main() {
-	//test
-	log.Printf("%v", currencyData)
-
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = listenPort

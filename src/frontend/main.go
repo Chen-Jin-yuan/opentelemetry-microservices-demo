@@ -131,7 +131,7 @@ func main() {
 		log.Errorf("got error while initializing consul agent: %v", err)
 	}
 
-	mustConnGRPC(ctx, &svc.currencySvcConn, svc.currencySvcAddr)
+	//mustConnGRPC(ctx, &svc.currencySvcConn, svc.currencySvcAddr)
 	// mustConnGRPC(ctx, &svc.productCatalogSvcConn, svc.productCatalogSvcAddr)
 	//mustConnGRPC(ctx, &svc.cartSvcConn, svc.cartSvcAddr)
 	// mustConnGRPC(ctx, &svc.recommendationSvcConn, svc.recommendationSvcAddr)
@@ -145,6 +145,7 @@ func main() {
 	mustConnGRPCNew(ctx, &svc.recommendationSvcConn, "recommendationservice")
 	mustConnGRPCNew(ctx, &svc.adSvcConn, "adservice")
 	mustConnGRPCNew(ctx, &svc.cartSvcConn, "cartservice")
+	mustConnGRPCNew(ctx, &svc.currencySvcConn, "currencyservice")
 
 	r := tracing.NewServeMux(Tracer)
 	r.Handle("/", http.HandlerFunc(svc.homeHandler))

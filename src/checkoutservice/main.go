@@ -141,7 +141,7 @@ func main() {
 	ctx := context.Background()
 	//mustConnGRPC(ctx, &svc.productCatalogSvcConn, svc.productCatalogSvcAddr)
 	//mustConnGRPC(ctx, &svc.cartSvcConn, svc.cartSvcAddr)
-	mustConnGRPC(ctx, &svc.currencySvcConn, svc.currencySvcAddr)
+	//mustConnGRPC(ctx, &svc.currencySvcConn, svc.currencySvcAddr)
 	//mustConnGRPC(ctx, &svc.shippingSvcConn, svc.shippingSvcAddr)
 	// 	mustConnGRPC(ctx, &svc.emailSvcConn, svc.emailSvcAddr)
 	//mustConnGRPC(ctx, &svc.paymentSvcConn, svc.paymentSvcAddr)
@@ -151,6 +151,7 @@ func main() {
 	mustConnGRPCNew(ctx, &svc.shippingSvcConn, "shippingservice")
 	mustConnGRPCNew(ctx, &svc.productCatalogSvcConn, "productcatalogservice")
 	mustConnGRPCNew(ctx, &svc.paymentSvcConn, "paymentservice")
+	mustConnGRPCNew(ctx, &svc.currencySvcConn, "currencyservice")
 
 	log.Infof("service config: %+v", svc)
 

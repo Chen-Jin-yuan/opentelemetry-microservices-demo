@@ -109,7 +109,7 @@ func ChargeHandler(request *pb.ChargeRequest) (*pb.ChargeResponse, error) {
 	}
 
 	// test
-	readAndPrintDataFromDB()
+	//readAndPrintDataFromDB()
 
 	// 返回交易ID
 	return &pb.ChargeResponse{TransactionId: transactionID}, nil

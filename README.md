@@ -119,12 +119,12 @@ curl -X POST -d "email=someone@example.com&street_address=1600 Amphitheatre Park
 * 使用 allocator 需要 grpc 1.29，此时默认的 jaeger 无法使用
 * 使用 allocator 的权重分配，下游需要 consul 注册，非共享的有 consul 接口就行
 
-* frontend：**go**，with grpc **1.29.1**，逻辑看看简化
-* checkoutservice：**go**，with grpc **1.44**，需要**降级 grpc 版本**，接入 jaeger
-* emailservice：python，留着，**用 python-consul 接口**
-* recommendationservice：python，**改成go**，因为最大并发度，逻辑简化，把 product 的那个删了
+* frontend：**go**，with grpc **1.29.1**
+* checkoutservice：**go**，with grpc **1.44**，**降级 grpc 版本**，接入 jaeger
+* emailservice：python，**用 python-consul 接口**
+* recommendationservice：python，**改成go**
 * currencyservice：javaScript，nodejs，**改 go**
-* cartservice：c#，with redis，**改成 go**，redis 看看有没有 **go 的接口**
+* cartservice：c#，with redis，**改成 go，redis 使用 go 的接口**
 * adservice：Java，**集成 consul api**
 * paymentservice：javaScript，nodejs，**改成 go**
 * productcatalogservice：**go**，with grpc **1.44**

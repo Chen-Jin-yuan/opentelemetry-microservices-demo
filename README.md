@@ -1,26 +1,5 @@
 ## 请求类型
-共有6种类型的请求
-
-
-1. **index(l):**
-```
-curl http://frontend:80/
-```
-
-   - **HTTP请求类型：** GET
-   - **URL路径：** "/"
-   - **描述：** 访问网站的主页。
-
-2. **setCurrency(l):**
-```
-curl -X POST -d 'currency_code=USD' http://frontend:80/setCurrency
-```
-   - **HTTP请求类型：** POST
-   - **URL路径：** "/setCurrency"
-   - **请求参数：** {'currency_code': '随机选择的货币代码'}
-   - **描述：** 设置货币，通过向服务器发送包含随机选择的货币代码的POST请求来模拟。
-
-3. **browseProduct(l):**
+1. **browseProduct(l):**
 ```
 curl http://frontend:80/product/1YMWWN1N4O
 ```
@@ -28,7 +7,7 @@ curl http://frontend:80/product/1YMWWN1N4O
    - **URL路径：** "/product/{随机选择的产品标识符}"
    - **描述：** 浏览网站上随机选择的产品，通过向服务器发送包含产品标识符的GET请求来模拟。
 
-4. **viewCart(l):**
+2. **viewCart(l):**
 ```
 curl http://frontend:80/cart
 ```
@@ -36,7 +15,7 @@ curl http://frontend:80/cart
    - **URL路径：** "/cart"
    - **描述：** 查看购物车，通过向服务器发送GET请求来获取购物车的内容。
 
-5. **addToCart(l):**
+3. **addToCart(l):**
 ```
 # 第一个请求 - 浏览产品
 curl http://frontend:80/product/1YMWWN1N4O
@@ -55,7 +34,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"product_id": "1YMWWN1N4O"
      - 第二个请求：{'product_id': '随机选择的产品标识符', 'quantity': 随机选择的数量}
    - **描述：** 将随机选择的产品添加到购物车中。首先，通过向服务器发送包含产品标识符的GET请求浏览产品，然后通过发送包含产品ID和数量的POST请求将其添加到购物车。
 
-6. **checkout(l):**
+4. **checkout(l):**
 ```
 # 第一个请求 - 浏览产品
 curl http://frontend:80/product/1YMWWN1N4O

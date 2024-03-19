@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adservice
+  template:
+    metadata:
+      labels:
+        app: adservice
+    spec:
+      serviceAccountName: default
+      nodeName: cpu-06
+      terminationGracePeriodSeconds: 5
+      containers:
+      - name: server
+        image: chenjinyuan/opentelemetry:adservice
+        ports:
+        - containerPort: 9555
+        env:
+        - name: PORT
+          value: "9555"
+        - name: OTEL_EXPORTER_OTLP_TRACES_ENDPOINT
+          value: "http://otelcollector:4317"
+        - name: OTEL_RESOURCE_ATTRIBUTES
+          value: "service.name=adservice,service.version=1.0.0"
+        readinessProbe:
+          initialDelaySeconds: 60
+          periodSeconds: 15
+          exec:
+            command: ["/bin/grpc_health_probe", "-addr=:9555"]
+        livenessProbe:
+          initialDelaySeconds: 60
+          periodSeconds: 15
+          exec:
+            command: ["/bin/grpc_health_probe", "-addr=:9555"]

@@ -1,0 +1,10 @@
+docker pull chenjinyuan/opentelemetry:productcatalog
+docker pull chenjinyuan/opentelemetry:recommendation
+docker pull chenjinyuan/opentelemetry:checkout
+docker pull chenjinyuan/opentelemetry:frontend-alloc
+docker pull chenjinyuan/opentelemetry:currency
+docker pull chenjinyuan/opentelemetry:payment
+docker pull chenjinyuan/opentelemetry:cartservice
+docker pull chenjinyuan/opentelemetry:adservice
+docker pull chenjinyuan/opentelemetry:email
+docker pull chenjinyuan/opentelemetry:shipping

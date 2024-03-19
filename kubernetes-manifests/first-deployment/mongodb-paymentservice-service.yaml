@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.22.0 (955b78124)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: mongodb-paymentservice
+  name: mongodb-paymentservice
+spec:
+  ports:
+    - name: "mongodb-paymentservice"
+      port: 27017
+      targetPort: 27017
+  selector:
+    io.kompose.service: mongodb-paymentservice
+status:
+  loadBalancer: {}

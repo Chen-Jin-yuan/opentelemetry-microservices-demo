@@ -99,35 +99,29 @@ curl -X POST -H "Content-Type: application/json" -d '{
    - **描述：** 模拟购物流程，包括浏览产品、将产品添加到购物车，然后执行结账操作。首先，通过向服务器发送包含产品标识符的GET请求浏览产品，然后通过发送包含产品ID和数量的POST请求将其添加到购物车。最后，通过发送包含结账信息的POST请求完成结账过程。
 
 ## 每种请求的调用图
-**setCurrency**
-```
-curl -X POST -d "currency_code=USD" http://10.96.48.250:80/setCurrency
-```
-![setCurrency](./image/setCurrency.png)
-
 **browseProduct**
 ```
 curl http://10.96.48.250:80/product/1YMWWN1N4O
 ```
-![browseProduct](./image/browseProduct.png)
+![browseProduct](./call-graph-image/browse.png)
 
 **viewCart**
 ```
 curl http://10.96.48.250:80/cart/view
 ```
-![viewCart](./image/viewCart.png)
+![viewCart](./call-graph-image/view.png)
 
 **addToCart**
 ```
 curl -X POST -d "product_id=0PUK6V6EV0&quantity=3" http://10.96.48.250:80/cart/add
 ```
-![addToCart](./image/addToCart.png)
+![addToCart](./call-graph-image/add.png)
 
 **checkout**
 ```
 curl -X POST -d "email=someone@example.com&street_address=1600 Amphitheatre Parkway&zip_code=94043&city=Mountain View&state=CA&country=United States&credit_card_number=4432-8015-6152-0454&credit_card_expiration_month=1&credit_card_expiration_year=2039&credit_card_cvv=672" http://10.96.48.250:80/cart/checkout
 ```
-![checkout](./image/checkout.png)
+![checkout](./call-graph-image/checkout.png)
 
 ## 微服务描述
 * adservice：Java，
@@ -152,7 +146,7 @@ curl -X POST -d "email=someone@example.com&street_address=1600 Amphitheatre Park
 * recommendationservice：python，**改成go**，因为最大并发度，逻辑简化，把 product 的那个删了
 * currencyservice：javaScript，nodejs，**改 go**
 * cartservice：c#，with redis，**改成 go**，redis 看看有没有 **go 的接口**
-* adservice：Java，**改成 go**
+* adservice：Java，**集成 consul api**
 * paymentservice：javaScript，nodejs，**改成 go**
 * productcatalogservice：**go**，with grpc **1.44**
 * shippingservice：**go**，with grpc **1.44**

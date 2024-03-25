@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: recommendationservice
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: recommendationservice
@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: chenjinyuan/opentelemetry:recommendation
+        image: chenjinyuan/opentelemetry:recommendation-delphinus
         ports:
         - containerPort: 8080
         readinessProbe:

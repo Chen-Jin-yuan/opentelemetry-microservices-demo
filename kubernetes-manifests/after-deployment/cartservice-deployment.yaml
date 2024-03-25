@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: cartservice
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: cartservice
@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: chenjinyuan/opentelemetry:cartservice
+        image: chenjinyuan/opentelemetry:cartservice-delphinus
         ports:
         - containerPort: 7070
         env:

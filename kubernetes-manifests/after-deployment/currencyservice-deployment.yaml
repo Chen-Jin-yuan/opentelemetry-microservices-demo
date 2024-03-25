@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: currencyservice
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: currencyservice
@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: chenjinyuan/opentelemetry:currency
+        image: chenjinyuan/opentelemetry:currency-delphinus
         ports:
         - name: grpc
           containerPort: 7000

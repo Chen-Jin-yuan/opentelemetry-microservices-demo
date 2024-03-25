@@ -16,7 +16,7 @@ spec:
       nodeName: cpu-06
       containers:
         - name: server
-          image: chenjinyuan/opentelemetry:checkout
+          image: chenjinyuan/opentelemetry:checkout-delphinus
           ports:
           - containerPort: 5050
           - containerPort: 10001

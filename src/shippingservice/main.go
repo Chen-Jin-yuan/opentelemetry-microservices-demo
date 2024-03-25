@@ -102,6 +102,7 @@ func main() {
 	var srv *grpc.Server = grpc.NewServer(
 		grpc.UnaryInterceptor(otelgrpc.UnaryServerInterceptor()),
 		grpc.StreamInterceptor(otelgrpc.StreamServerInterceptor()),
+		grpc.MaxConcurrentStreams(2),
 	)
 
 	svc := &server{}

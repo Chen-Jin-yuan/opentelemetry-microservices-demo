@@ -93,6 +93,7 @@ func main() {
 		),
 	}
 
+	opts = append(opts, grpc.MaxConcurrentStreams(2))
 	var srv = grpc.NewServer(opts...)
 
 	pb.RegisterCartServiceServer(srv, svc)

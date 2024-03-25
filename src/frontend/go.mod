@@ -9,9 +9,8 @@ replace github.com/harlow/go-micro-services/tracing => ./tracing
 require (
 	cloud.google.com/go/compute/metadata v0.2.0
 	github.com/Chen-Jin-yuan/grpc/consul v1.0.3
-	github.com/Chen-Jin-yuan/grpc/dialer v1.2.1
+	github.com/Chen-Jin-yuan/grpc/dialer v1.1.5
 	github.com/google/uuid v1.3.1
-	github.com/gorilla/mux v1.8.0
 	github.com/harlow/go-micro-services/tracing v0.0.0-00010101000000-000000000000
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/pkg/errors v0.9.1
@@ -20,7 +19,7 @@ require (
 )
 
 require (
-	github.com/Chen-Jin-yuan/grpc/allocator v1.2.1 // indirect
+	github.com/Chen-Jin-yuan/grpc/allocator v1.1.4 // indirect
 	github.com/armon/go-metrics v0.4.1 // indirect
 	github.com/fatih/color v1.14.1 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect

@@ -2,82 +2,121 @@
   "productcatalogservice": {
     "group": {
       "group1": {
-        "number": 10000
+        "number": 1,
+        "selector": {
+          "request-type": "browse"
+        }
+      },
+      "group2": {
+        "number": 1,
+        "selector": {
+          "request-type": "view"
+        }
+      },
+      "group3": {
+        "number": 1,
+        "selector": {
+          "request-type": "add"
+        }
+      },
+      "group4": {
+        "number": 1,
+        "selector": {
+          "request-type": "checkout"
+        }
       }
     }
   },
-  "checkoutservice": {
+  "cartservice": {
     "group": {
       "group1": {
-        "number": 10000
+        "number": 1,
+        "selector": {
+          "request-type": "browse"
+        }
+      },
+      "group2": {
+        "number": 1,
+        "selector": {
+          "request-type": "view"
+        }
+      },
+      "group3": {
+        "number": 1,
+        "selector": {
+          "request-type": "add"
+        }
+      },
+      "group4": {
+        "number": 1,
+        "selector": {
+          "request-type": "checkout"
+        }
       }
     }
   },
   "shippingservice": {
     "group": {
       "group1": {
-        "number": 10000
+        "number": 1,
+        "selector": {
+          "request-type": "browse"
+        }
+      },
+      "group2": {
+        "number": 1,
+        "selector": {
+          "request-type": "checkout"
+        }
       }
     }
   },
   "recommendationservice": {
     "group": {
       "group1": {
-        "number": 10000
-      }
-    }
-  },
-  "srv-profile": {
-    "group": {
-      "group1": {
         "number": 1,
         "selector": {
-          "request-type": "recommend"
+          "request-type": "browse"
         }
       },
       "group2": {
         "number": 1,
         "selector": {
-          "request-type": "search"
+          "request-type": "view"
+        }
+      },
+      "group3": {
+        "number": 1,
+        "selector": {
+          "request-type": "checkout"
         }
       }
     }
   },
-  "srv-recommendation": {
-    "group": {
-      "group1": {
-        "number": 10000
-      }
-    }
-  },
-  "srv-user": {
+  "currencyservice": {
     "group": {
       "group1": {
         "number": 1,
         "selector": {
-          "request-type": "user"
+          "request-type": "browse"
         }
       },
       "group2": {
         "number": 1,
         "selector": {
-          "request-type": "reservation"
-        }
-      }
-    }
-  },
-  "srv-reservation": {
-    "group": {
-      "group1": {
-        "number": 1,
-        "selector": {
-          "request-type": "search"
+          "request-type": "view"
         }
       },
-      "group2": {
+      "group3": {
         "number": 1,
         "selector": {
-          "request-type": "reservation"
+          "request-type": "add"
+        }
+      },
+      "group4": {
+        "number": 1,
+        "selector": {
+          "request-type": "checkout"
         }
       }
     }

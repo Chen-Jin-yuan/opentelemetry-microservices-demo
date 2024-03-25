@@ -2,12 +2,12 @@ cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMT
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/Chen-Jin-yuan/GRPC-MyHelloWorld/helloworld v0.0.0-20231030121140-eee4c38e0b6e h1:3Cdm6lQkJEYGZvi396wvcHA/IkHc7Z6REFWTISkNVW8=
 github.com/Chen-Jin-yuan/GRPC-MyHelloWorld/helloworld v0.0.0-20231030121140-eee4c38e0b6e/go.mod h1:hQ/2i23LWVt1HJRBhu/IZwJkGLJ4zfvStYyn0e97F/g=
-github.com/Chen-Jin-yuan/grpc/allocator v1.2.1 h1:EfioRcekQ+BhB2svp1elYANIXobK4EQ9anukn3qs3Uc=
-github.com/Chen-Jin-yuan/grpc/allocator v1.2.1/go.mod h1:obiyhPfNeG/FMYiARYOLB68BanlvIsNEvMEPyGR2Yj4=
+github.com/Chen-Jin-yuan/grpc/allocator v1.1.4 h1:yNyEJpShCUz9tADG/8Met+PNLbV7EcXBmhlY6PZswVY=
+github.com/Chen-Jin-yuan/grpc/allocator v1.1.4/go.mod h1:obiyhPfNeG/FMYiARYOLB68BanlvIsNEvMEPyGR2Yj4=
 github.com/Chen-Jin-yuan/grpc/consul v1.0.3 h1:OST1Vvz2twMKiL6QM7oSouwa24W0zW/9mW3OfghOeMc=
 github.com/Chen-Jin-yuan/grpc/consul v1.0.3/go.mod h1:ZRq2Lc3bOe+QT+K2IIhFfaMRzrfTPKoQKbVngmTL9Uw=
-github.com/Chen-Jin-yuan/grpc/dialer v1.2.1 h1:57bANp5I3NCcD9ggoLTilmPc2op7b2hJ6CneIdEpFKQ=
-github.com/Chen-Jin-yuan/grpc/dialer v1.2.1/go.mod h1:w21IDRO5E9QRjHUWdnq8tqggjju45As7sNFGDYKU4XI=
+github.com/Chen-Jin-yuan/grpc/dialer v1.1.5 h1:mraA3qp3tihNZfxf166FfxMYKcXFrF3NrXyFZfqOnNQ=
+github.com/Chen-Jin-yuan/grpc/dialer v1.1.5/go.mod h1:3jf6GAZ4nxFbG66taQOOf/mvxZRzMxmNvlMRtQoq9rk=
 github.com/DataDog/datadog-go v3.2.0+incompatible/go.mod h1:LButxg5PwREeZtORoXG3tL4fMGNddJ+vMq1mwgfaqoQ=
 github.com/HdrHistogram/hdrhistogram-go v1.1.2 h1:5IcZpTvzydCQeHzK4Ef/D5rrSqwxob0t8PQPMybUNFM=
 github.com/HdrHistogram/hdrhistogram-go v1.1.2/go.mod h1:yDgFjdqOqDEKOvasDdhWNXYg9BVp4O+o5f6V/ehm6Oo=

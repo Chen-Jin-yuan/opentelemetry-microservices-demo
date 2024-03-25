@@ -1,0 +1,102 @@
+{
+  "productcatalogservice": {
+    "group": {
+      "group1": {
+        "number": 1,
+        "selector": {
+          "request-type": "browse"
+        }
+      },
+      "group2": {
+        "number": 1,
+        "selector": {
+          "request-type": "view"
+        }
+      },
+      "group3": {
+        "number": 1,
+        "selector": {
+          "request-type": "add"
+        }
+      },
+      "group4": {
+        "number": 1,
+        "selector": {
+          "request-type": "checkout"
+        }
+      }
+    }
+  },
+  "cartservice": {
+    "group": {
+      "group1": {
+        "number": 1,
+        "selector": {
+          "request-type": "browse"
+        }
+      },
+      "group2": {
+        "number": 1,
+        "selector": {
+          "request-type": "view"
+        }
+      },
+      "group3": {
+        "number": 1,
+        "selector": {
+          "request-type": "add"
+        }
+      },
+      "group4": {
+        "number": 1,
+        "selector": {
+          "request-type": "checkout"
+        }
+      }
+    }
+  },
+  "shippingservice": {
+    "group": {
+      "group1": {
+        "number": 1,
+        "selector": {
+          "request-type": "browse"
+        }
+      },
+      "group2": {
+        "number": 1,
+        "selector": {
+          "request-type": "checkout"
+        }
+      }
+    }
+  },
+  "currencyservice": {
+    "group": {
+      "group1": {
+        "number": 1,
+        "selector": {
+          "request-type": "browse"
+        }
+      },
+      "group2": {
+        "number": 1,
+        "selector": {
+          "request-type": "view"
+        }
+      },
+      "group3": {
+        "number": 1,
+        "selector": {
+          "request-type": "add"
+        }
+      },
+      "group4": {
+        "number": 1,
+        "selector": {
+          "request-type": "checkout"
+        }
+      }
+    }
+  }
+}

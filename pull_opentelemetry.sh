@@ -1,10 +1,10 @@
-docker pull chenjinyuan/opentelemetry:productcatalog
-docker pull chenjinyuan/opentelemetry:recommendation
-docker pull chenjinyuan/opentelemetry:checkout
-docker pull chenjinyuan/opentelemetry:frontend-alloc
-docker pull chenjinyuan/opentelemetry:currency
+docker pull chenjinyuan/opentelemetry:productcatalog-delphinus
+docker pull chenjinyuan/opentelemetry:recommendation-delphinus
+docker pull chenjinyuan/opentelemetry:checkout-delphinus
+docker pull chenjinyuan/opentelemetry:frontend-delphinus
+docker pull chenjinyuan/opentelemetry:currency-delphinus
 docker pull chenjinyuan/opentelemetry:payment
-docker pull chenjinyuan/opentelemetry:cartservice
+docker pull chenjinyuan/opentelemetry:cartservice-delphinus
 docker pull chenjinyuan/opentelemetry:adservice
 docker pull chenjinyuan/opentelemetry:email
-docker pull chenjinyuan/opentelemetry:shipping
+docker pull chenjinyuan/opentelemetry:shipping-delphinus

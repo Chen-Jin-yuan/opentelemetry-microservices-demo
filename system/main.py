@@ -41,11 +41,11 @@ if __name__ == "__main__":
 
     #开始新的动态负载
     t_start=time.time()
-    duration=20#预计执行实验时间
+    duration=30#预计执行实验时间
     # loadGenerator
     p_load = Process(target=load_func, args=())
 
-    # p_load.start()
+    p_load.start()
     time.sleep(5) #等待4秒钟(LoadGenerator启动需要时间) or more?可以尝试一下
     
     #监测负载+CallGraph比例
@@ -70,10 +70,10 @@ if __name__ == "__main__":
     #     pass
 
     # 等待load执行结束,最终调整并记录
-    # p_load.join()
+    p_load.join()
     
-    # latency_analyze(t_start,duration)#最后的param代表实验组号码
+    latency_analyze(t_start,duration)#最后的param代表实验组号码
 
-    ip = nginxIP[0].replace("\n","")
-    url_c = f"http://{ip}:10001/counter"
-    get_counter(url_c)
+    # ip = nginxIP[0].replace("\n","")
+    # url_c = f"http://{ip}:10001/counter"
+    # get_counter(url_c)

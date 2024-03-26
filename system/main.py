@@ -33,7 +33,7 @@ def load_func():
 if __name__ == "__main__":
 
     #初始化所有共享
-    SVC_Shared=init_MSs()#SVC_shared: user reservation # CG_shared: dis price score profile
+    SVC_Shared=init_MSs() #SVC_shared: user reservation
     print_all_sharedMSs("initialization")
 
     #设置初始横纵向拓展资源(实验初始状态): 只需要确定纵向, 横向和分组一开始手动计算设定

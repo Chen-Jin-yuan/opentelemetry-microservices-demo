@@ -1,0 +1,143 @@
+{
+    "srv-usertimeline": {
+        "composePost": {
+            "max_load": 500,
+            "slope": 0.02,
+            "intercept": 0,
+            "SingleReplicaMax": 40,
+            "OracleQPS": 1200,
+            "OracleVertical": 100
+        },
+        "readUserTimeline": {
+            "max_load": 330,
+            "slope": 0.02,
+            "intercept": 0,
+            "SingleReplicaMax": 20,
+            "OracleQPS": 300,
+            "OracleVertical": 20
+        }
+    },
+    "srv-hometimeline": {
+        "composePost": {
+            "max_load": 490,
+            "slope": 0.02,
+            "intercept": 0,
+            "SingleReplicaMax": 45,
+            "OracleQPS": 1200,
+            "OracleVertical": 115
+        },
+        "readHomeTimeline": {
+            "max_load": 440,
+            "slope": 0.02,
+            "intercept": 0,
+            "SingleReplicaMax": 20,
+            "OracleQPS": 100,
+            "OracleVertical": 4
+        }
+    },
+    "srv-poststorage": {
+        "composePost": {
+            "max_load": 10000,
+            "slope": 0.02,
+            "intercept": 0,
+            "SingleReplicaMax": 30,
+            "OracleQPS": 1600,
+            "OracleVertical": 30
+        }
+    },
+    "srv-text": {
+        "Urlshorten": {
+            "CG2": {
+                "max_load": 270,
+                "slope": 0.02,
+                "intercept": 0,
+                "SingleReplicaMax": 19,
+                "OracleQPS": 160,
+                "OracleVertical": 13
+            },
+            "CG5": {
+                "max_load": 270,
+                "slope": 0.02,
+                "intercept": 0,
+                "SingleReplicaMax": 19,
+                "OracleQPS": 260,
+                "OracleVertical": 19
+            }
+        },
+        "UserMention": {
+            "CG1": {
+                "max_load": 480,
+                "slope": 0.02,
+                "intercept": 0,
+                "SingleReplicaMax": 24,
+                "OracleQPS": 80,
+                "OracleVertical": 10
+            },
+            "CG4": {
+                "max_load": 480,
+                "slope": 0.02,
+                "intercept": 0,
+                "SingleReplicaMax": 24,
+                "OracleQPS": 120,
+                "OracleVertical": 9
+            }
+        },
+        "Userurl": {
+            "CG3": {
+                "max_load": 275,
+                "slope": 0.02,
+                "intercept": 0,
+                "SingleReplicaMax": 22,
+                "OracleQPS": 360,
+                "OracleVertical": 30
+            },
+            "CG6": {
+                "max_load": 275,
+                "slope": 0.02,
+                "intercept": 0,
+                "SingleReplicaMax": 22,
+                "OracleQPS": 190,
+                "OracleVertical": 17
+            }
+        }
+    },
+    "srv-media": {
+        "composePost": {
+            "CG4": {
+                "max_load": 615,
+                "slope": 0.02,
+                "intercept": 0,
+                "SingleReplicaMax": 80,
+                "OracleQPS": 120,
+                "OracleVertical": 16
+            },
+            "CG5": {
+                "max_load": 305,
+                "slope": 0.02,
+                "intercept": 0,
+                "SingleReplicaMax": 80,
+                "OracleQPS": 260,
+                "OracleVertical": 68
+            },
+            "CG6": {
+                "max_load": 305,
+                "slope": 0.02,
+                "intercept": 0,
+                "SingleReplicaMax": 80,
+                "OracleQPS": 220,
+                "OracleVertical": 58
+            }
+        }
+    },
+    "srv-usertimeline-VerticalAll": 144,
+    "srv-hometimeline-VerticalAll": 143,
+    "srv-poststorage-VerticalAll": 36,
+    "srv-text-VerticalAll": 105,
+    "srv-media-VerticalAll": 138,
+    "srv-usertimeline-enlarge": 1,
+    "srv-hometimeline-enlarge": 1,
+    "srv-poststorage-enlarge": 1,
+    "srv-text-enlarge": 1.1,
+    "srv-media-enlarge": 1.1,
+    "Recommend-Tot-QPS": 1200
+}

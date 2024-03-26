@@ -13,7 +13,7 @@ spec:
         app: paymentservice
     spec:
       serviceAccountName: default
-      nodeName: cpu-06
+      nodeName: cpu-04
       terminationGracePeriodSeconds: 5
       containers:
       - name: server

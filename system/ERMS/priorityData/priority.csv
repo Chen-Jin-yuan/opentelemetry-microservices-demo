@@ -1,0 +1,3 @@
+service,microservice,parent,priority
+Search,profile,frontend,1
+Recommendation,profile,frontend,0

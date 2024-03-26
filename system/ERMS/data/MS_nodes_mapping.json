@@ -1,0 +1,32 @@
+{
+    "srv-composepost": [
+        "cpu-06\n"
+    ],
+    "srv-hometimeline": [
+        "cpu-04\n"
+    ],
+    "srv-media": [
+        "cpu-07\n"
+    ],
+    "srv-nginx": [
+        "cpu-03\n"
+    ],
+    "srv-poststorage": [
+        "cpu-04\n"
+    ],
+    "srv-socialgraph": [
+        "cpu-04\n"
+    ],
+    "srv-text": [
+        "cpu-08\n"
+    ],
+    "srv-uniqueid": [
+        "cpu-08\n"
+    ],
+    "srv-user": [
+        "cpu-08\n"
+    ],
+    "srv-usertimeline": [
+        "cpu-04\n"
+    ]
+}

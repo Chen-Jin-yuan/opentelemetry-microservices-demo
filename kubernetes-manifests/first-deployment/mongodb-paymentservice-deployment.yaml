@@ -26,7 +26,7 @@ spec:
       labels:
         io.kompose.service: mongodb-paymentservice
     spec:
-      nodeName: cpu-06
+      nodeName: cpu-04
       containers:
         - image: mongo:4.4.6
           imagePullPolicy: IfNotPresent

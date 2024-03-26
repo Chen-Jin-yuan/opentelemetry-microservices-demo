@@ -1,0 +1,22 @@
+{
+    "productcatalogservice": {
+        "grouped": [2,2,1,2],
+        "vertical":[[31, 31, 31],[15]]
+    },
+    "currencyservice": {
+        "grouped": [1,1,1,1],
+        "vertical":[[37, 37, 37],[9]]
+    },
+    "cartservice": {
+        "grouped": [1,1,1,1],
+        "vertical":[[20]]
+    },
+    "recommendationservice": {
+        "grouped": [1,1,1],
+        "vertical":[[11.5, 11.5],[17],[17, 17]]
+    },
+    "shippingservice": {
+        "grouped": [1,1],
+        "vertical":[[65,65]]
+    }
+}

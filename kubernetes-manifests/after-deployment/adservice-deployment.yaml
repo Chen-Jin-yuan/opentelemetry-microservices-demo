@@ -13,7 +13,7 @@ spec:
         app: adservice
     spec:
       serviceAccountName: default
-      nodeName: cpu-06
+      nodeName: cpu-08
       terminationGracePeriodSeconds: 5
       containers:
       - name: server

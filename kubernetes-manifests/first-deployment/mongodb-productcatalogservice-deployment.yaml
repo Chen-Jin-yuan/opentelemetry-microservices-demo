@@ -26,7 +26,7 @@ spec:
       labels:
         io.kompose.service: mongodb-productcatalogservice
     spec:
-      nodeName: cpu-06
+      nodeName: cpu-08
       containers:
         - image: mongo:4.4.6
           imagePullPolicy: IfNotPresent

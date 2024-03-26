@@ -25,7 +25,7 @@ spec:
       labels:
         app: redis-cart
     spec:
-      nodeName: cpu-06
+      nodeName: cpu-08
       containers:
       - name: redis
         image: redis:alpine

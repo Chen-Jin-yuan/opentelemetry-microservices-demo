@@ -15,7 +15,7 @@ spec:
         sidecar.istio.io/rewriteAppHTTPProbers: "true"
     spec:
       serviceAccountName: default
-      nodeName: cpu-06
+      nodeName: cpu-03
       containers:
         - name: server
           image: chenjinyuan/opentelemetry:frontend-delphinus

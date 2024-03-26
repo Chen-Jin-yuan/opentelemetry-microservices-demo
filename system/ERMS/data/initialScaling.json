@@ -1,0 +1,22 @@
+{
+    "srv-usertimeline": {
+        "replicas": 4,
+        "totRES": 107
+    },
+    "srv-hometimeline": {
+        "replicas": 4,
+        "totRES": 119
+    },
+    "srv-poststorage": {
+        "replicas": 1,
+        "totRES": 20
+    },
+    "srv-text": {
+        "replicas": 5,
+        "totRES": 80
+    },
+    "srv-media": {
+        "replicas": 2,
+        "totRES": 130
+    }
+}

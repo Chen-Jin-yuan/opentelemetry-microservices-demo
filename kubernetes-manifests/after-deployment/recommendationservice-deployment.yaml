@@ -13,7 +13,7 @@ spec:
         app: recommendationservice
     spec:
       serviceAccountName: default
-      nodeName: cpu-06
+      nodeName: cpu-07
       terminationGracePeriodSeconds: 5
       containers:
       - name: server

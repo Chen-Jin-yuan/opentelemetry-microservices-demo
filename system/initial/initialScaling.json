@@ -1,22 +1,22 @@
 {
     "productcatalogservice": {
-        "grouped": [2,2,1,2],
-        "vertical":[[31, 31, 31],[15]]
+        "grouped": [2,2,1,1],
+        "vertical":[[10, 8],[10, 4],[8],[13]]
     },
     "currencyservice": {
-        "grouped": [1,1,1,1],
-        "vertical":[[37, 37, 37],[9]]
+        "grouped": [1,1,1],
+        "vertical":[[7.5], [7.5],[8.1]]
     },
     "cartservice": {
         "grouped": [1,1,1,1],
-        "vertical":[[20]]
+        "vertical":[[5.4],[5.4],[6.6],[9.6]]
     },
     "recommendationservice": {
         "grouped": [1,1,1],
-        "vertical":[[11.5, 11.5],[17],[17, 17]]
+        "vertical":[[7.5],[7.5],[7.5]]
     },
     "shippingservice": {
         "grouped": [1,1],
-        "vertical":[[65,65]]
+        "vertical":[[5.4],[10.5]]
     }
 }

@@ -68,7 +68,7 @@ class SharedMS:
         deployment_name=self.msName
         pods_all = v1.list_namespaced_pod(namespace)
         for pod in pods_all.items:
-            if pod.metadata.labels.get('io.kompose.service') == deployment_name:
+            if pod.metadata.labels.get('app') == deployment_name:
                 self.replicaNumber+=1
                 self.pods.append(pod.metadata.name)
                 self.IPs.append(pod.status.pod_ip)
@@ -84,7 +84,7 @@ class SharedMS:
             deployment_name=ms_name
             pods_all = v1.list_namespaced_pod(namespace)
             for pod in pods_all.items:
-                if pod.metadata.labels.get('io.kompose.service') == deployment_name:
+                if pod.metadata.labels.get('app') == deployment_name:
                     self.upPods[-1].append(pod.metadata.name)
                     self.upIPs[-1].append(pod.status.pod_ip)
 

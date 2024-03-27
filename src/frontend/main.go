@@ -209,8 +209,7 @@ func mustConnGRPCNew(ctx context.Context, conn **grpc.ClientConn, addr string) {
 	*conn, err = dialer.Dial(
 		addr,
 		dialer.WithTracer(Tracer),
-		dialer.WithBalancer(registry, "./frontend_config.json", 10001),
-		dialer.WithStatsHandler(),
+		dialer.WithBalancerRR(registry),
 	)
 	if err != nil {
 		panic(errors.Wrapf(err, "grpc: failed to connect %s", addr))

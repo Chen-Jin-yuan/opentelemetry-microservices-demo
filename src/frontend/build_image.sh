@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tag="-delphinus"
+tag="-erms"
 service="frontend"
 name="$service$tag"
 

@@ -223,7 +223,10 @@ class SharedMS:
             this_ip=ips[i].split(":")[0]
             this_uid=self.uids[self.IPs.index(this_ip)]
             this_res=resource_list[i]
-            rpc_set_cpu(node_name,this_uid,this_res)
+            try:
+                rpc_set_cpu(node_name,this_uid,this_res)
+            except:
+                print("set cpu failed!!!", node_name,this_uid,this_res)
             ts=time.time()
             this_vertical_res.append([self.msName,this_uid,this_ip,this_res,mark,ts])#记录分配时间,便于最后算过程中core*hour
             print("Adjusting",self.msName,this_uid,this_ip,"to",this_res,"done.")
@@ -236,7 +239,10 @@ class SharedMS:
         # print(self.IPs)
         this_uid=self.uids[self.IPs.index(this_ip)]
         node_name=MS_node_mapping[self.msName][0].replace("\n","")
-        rpc_set_cpu(node_name,this_uid,res)
+        try:
+            rpc_set_cpu(node_name,this_uid,res)
+        except:
+            print("set cpu failed!!!", node_name,this_uid,res)
         ts=time.time()
         print("Adjusting",self.msName,this_uid,this_ip,"to",res,"done.")
         with open("results/Vertical-RES.csv", 'a', newline='') as file:

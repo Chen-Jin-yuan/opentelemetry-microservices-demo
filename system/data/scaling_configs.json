@@ -89,7 +89,7 @@
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 13,
-            "OracleQPS": 1500,
+            "OracleQPS": 750,
             "OracleVertical": 30
         }
     },

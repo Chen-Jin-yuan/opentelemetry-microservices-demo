@@ -53,7 +53,11 @@ def record_QPS_oracle_real():
         real_QPS,wait_QPS=sm.return_read_waiting()        
         rows=list()
         for key in real_QPS.keys():
-            rows.append([sm.msName,key,str(real_QPS[key]),str(data[sm.msName][key]['OracleQPS']),str(real_QPS[key]/data[sm.msName][key]['OracleQPS'])])    
+            rows.append([sm.msName,key,str(real_QPS[key]),str(data[sm.msName][key]['OracleQPS']),str(real_QPS[key]/data[sm.msName][key]['OracleQPS'])]) 
+            # 循环调用会导致计数多若干倍，可以提前预设一个文件统计每个service会循环调用几次，然后放缩
+            # 这里使用简单的方式，直接用 OracleQPS
+            print(key, sm.msName, sm.real_QPS[key], "->", data[sm.msName][key]['OracleQPS'])
+            sm.real_QPS[key] = data[sm.msName][key]['OracleQPS']
         with open("results/monitor-QPS.csv", 'a', newline='') as file:
             writer = csv.writer(file)
             for row in rows:

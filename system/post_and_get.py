@@ -117,10 +117,6 @@ if __name__ == "__main__":
     # nginxIP=os.popen("kubectl get svc | grep frontend | awk '{print $3}'").readlines()
     ip = nginxIP[0].replace("\n","")
 
-    for i in range (100):
-        load(ip, 1, 1, 1, 1)
-        time.sleep(0.1)
-        print()
 
     url_c = f"http://{ip}:10001/counter"
     get_counter(url_c)

@@ -145,7 +145,6 @@ class SharedMS:
         print(self.upIPs[0][0],self.msName)
         params = {"name": self.msName}
         response = requests.get(url_up, params=params)
-        # print(response.text)
         if(response.status_code!=200):
             print("Get_now_groups error, Error Code=",response.status_code)
             return
@@ -213,11 +212,11 @@ class SharedMS:
         self.get_now_groups()
         ips=self.now_groups["group"+str(counter)]['addresses']#需要按照now_groups ip顺序来分配
         print("group"+str(counter),ips)
-        # while(len(ips)!=len(resource_list)):#可能group更新有延迟
-        #     time.sleep(0.1)
-        #     self.get_now_groups()
-        #     ips=self.now_groups["group"+str(counter)]['addresses']#需要按照now_groups ip顺序来分配
-        # assert len(ips)==len(resource_list)
+        while(len(ips)!=len(resource_list)):#可能group更新有延迟
+            time.sleep(0.1)
+            self.get_now_groups()
+            ips=self.now_groups["group"+str(counter)]['addresses']#需要按照now_groups ip顺序来分配
+        assert len(ips)==len(resource_list)
         this_vertical_res=list()#为了将最终纵向资源结果记录进入文件(横向副本数量应该不用记录,最后跑完看一下即可)
         for i in range(len(resource_list)):
             node_name=MS_node_mapping[self.msName][0].replace("\n","")

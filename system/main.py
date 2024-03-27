@@ -60,14 +60,14 @@ if __name__ == "__main__":
     # profile 线性模型 # load -> 线性模型 # load-> oracle values
     # Scaling横纵向决策(根据monitor的记录)
 
-    # Scaling_Decisions()
+    Scaling_Decisions()
     
-    # time.sleep(10)
+    time.sleep(2)
 
-    # try:
-    #     montorMEM(pod_uids)
-    # except:
-    #     pass
+    try:
+        montorMEM(pod_uids)
+    except:
+        pass
 
     # 等待load执行结束,最终调整并记录
     p_load.join()

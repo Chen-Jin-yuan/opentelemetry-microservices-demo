@@ -1,11 +1,11 @@
 import subprocess
 
-path = "/state/partition/jcshi/CJY/socialNetwork/System/"
+path = "/state/partition/jcshi/CJY/opentelemetry-microservices-demo/system/"
 # 需要在 root 用户下运行
 def scp_file_to_remote(node):
     try:
         # 构建scp命令
-        command = f"scp -r {path} {node}:/state/partition/jcshi/CJY/socialNetwork/"
+        command = f"scp -r {path} {node}:/state/partition/jcshi/CJY/opentelemetry-microservices-demo/"
 
         # 执行scp命令
         result = subprocess.run(command, shell=True, check=True, capture_output=True, text=True)

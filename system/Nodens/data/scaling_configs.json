@@ -1,143 +1,145 @@
 {
-    "srv-usertimeline": {
-        "composePost": {
-            "max_load": 500,
+    "productcatalogservice": {
+        "browse": {
+            "max_load": 583,
             "slope": 0.02,
             "intercept": 0,
-            "SingleReplicaMax": 40,
-            "OracleQPS": 1200,
-            "OracleVertical": 100
+            "SingleReplicaMax": 14,
+            "OracleQPS": 750,
+            "OracleVertical": 30
         },
-        "readUserTimeline": {
-            "max_load": 330,
+        "view": {
+            "max_load": 666,
             "slope": 0.02,
             "intercept": 0,
-            "SingleReplicaMax": 20,
-            "OracleQPS": 300,
-            "OracleVertical": 20
-        }
-    },
-    "srv-hometimeline": {
-        "composePost": {
-            "max_load": 490,
-            "slope": 0.02,
-            "intercept": 0,
-            "SingleReplicaMax": 45,
-            "OracleQPS": 1200,
-            "OracleVertical": 115
+            "SingleReplicaMax": 12,
+            "OracleQPS": 750,
+            "OracleVertical": 30
         },
-        "readHomeTimeline": {
-            "max_load": 440,
+        "add": {
+            "max_load": 1346,
             "slope": 0.02,
             "intercept": 0,
-            "SingleReplicaMax": 20,
-            "OracleQPS": 100,
-            "OracleVertical": 4
-        }
-    },
-    "srv-poststorage": {
-        "composePost": {
-            "max_load": 10000,
+            "SingleReplicaMax": 14,
+            "OracleQPS": 750,
+            "OracleVertical": 30
+        },
+        "checkout": {
+            "max_load": 892,
             "slope": 0.02,
             "intercept": 0,
-            "SingleReplicaMax": 30,
-            "OracleQPS": 1600,
+            "SingleReplicaMax": 15,
+            "OracleQPS": 750,
             "OracleVertical": 30
         }
     },
-    "srv-text": {
-        "Urlshorten": {
-            "CG2": {
-                "max_load": 270,
-                "slope": 0.02,
-                "intercept": 0,
-                "SingleReplicaMax": 19,
-                "OracleQPS": 160,
-                "OracleVertical": 13
-            },
-            "CG5": {
-                "max_load": 270,
-                "slope": 0.02,
-                "intercept": 0,
-                "SingleReplicaMax": 19,
-                "OracleQPS": 260,
-                "OracleVertical": 19
-            }
+    "currencyservice": {
+        "browse": {
+            "max_load": 1200,
+            "slope": 0.02,
+            "intercept": 0,
+            "SingleReplicaMax": 12,
+            "OracleQPS": 750,
+            "OracleVertical": 30
         },
-        "UserMention": {
-            "CG1": {
-                "max_load": 480,
-                "slope": 0.02,
-                "intercept": 0,
-                "SingleReplicaMax": 24,
-                "OracleQPS": 80,
-                "OracleVertical": 10
-            },
-            "CG4": {
-                "max_load": 480,
-                "slope": 0.02,
-                "intercept": 0,
-                "SingleReplicaMax": 24,
-                "OracleQPS": 120,
-                "OracleVertical": 9
-            }
+        "view": {
+            "max_load": 1100,
+            "slope": 0.02,
+            "intercept": 0,
+            "SingleReplicaMax": 11,
+            "OracleQPS": 750,
+            "OracleVertical": 30
         },
-        "Userurl": {
-            "CG3": {
-                "max_load": 275,
-                "slope": 0.02,
-                "intercept": 0,
-                "SingleReplicaMax": 22,
-                "OracleQPS": 360,
-                "OracleVertical": 30
-            },
-            "CG6": {
-                "max_load": 275,
-                "slope": 0.02,
-                "intercept": 0,
-                "SingleReplicaMax": 22,
-                "OracleQPS": 190,
-                "OracleVertical": 17
-            }
+        "checkout": {
+            "max_load": 1481,
+            "slope": 0.02,
+            "intercept": 0,
+            "SingleReplicaMax": 16,
+            "OracleQPS": 750,
+            "OracleVertical": 30
         }
     },
-    "srv-media": {
-        "composePost": {
-            "CG4": {
-                "max_load": 615,
-                "slope": 0.02,
-                "intercept": 0,
-                "SingleReplicaMax": 80,
-                "OracleQPS": 120,
-                "OracleVertical": 16
-            },
-            "CG5": {
-                "max_load": 305,
-                "slope": 0.02,
-                "intercept": 0,
-                "SingleReplicaMax": 80,
-                "OracleQPS": 260,
-                "OracleVertical": 68
-            },
-            "CG6": {
-                "max_load": 305,
-                "slope": 0.02,
-                "intercept": 0,
-                "SingleReplicaMax": 80,
-                "OracleQPS": 220,
-                "OracleVertical": 58
-            }
+    "cartservice": {
+        "browse": {
+            "max_load": 1666,
+            "slope": 0.02,
+            "intercept": 0,
+            "SingleReplicaMax": 12,
+            "OracleQPS": 750,
+            "OracleVertical": 30
+        },
+        "view": {
+            "max_load": 1388,
+            "slope": 0.02,
+            "intercept": 0,
+            "SingleReplicaMax": 10,
+            "OracleQPS": 750,
+            "OracleVertical": 30
+        },
+        "add": {
+            "max_load": 1363,
+            "slope": 0.02,
+            "intercept": 0,
+            "SingleReplicaMax": 12,
+            "OracleQPS": 750,
+            "OracleVertical": 30
+        },
+        "checkout": {
+            "max_load": 1015,
+            "slope": 0.02,
+            "intercept": 0,
+            "SingleReplicaMax": 13,
+            "OracleQPS": 750,
+            "OracleVertical": 30
         }
     },
-    "srv-usertimeline-VerticalAll": 132,
-    "srv-hometimeline-VerticalAll": 131,
-    "srv-poststorage-VerticalAll": 80,
-    "srv-text-VerticalAll": 105,
-    "srv-media-VerticalAll": 138,
-    "srv-usertimeline-enlarge": 1,
-    "srv-hometimeline-enlarge": 1,
-    "srv-poststorage-enlarge": 1,
-    "srv-text-enlarge": 1.1,
-    "srv-media-enlarge": 1.1,
-    "Recommend-Tot-QPS": 1200
+    "shippingservice": {
+        "view": {
+            "max_load": 1875,
+            "slope": 0.02,
+            "intercept": 0,
+            "SingleReplicaMax": 13.5,
+            "OracleQPS": 750,
+            "OracleVertical": 30
+        },
+        "checkout": {
+            "max_load": 1214,
+            "slope": 0.02,
+            "intercept": 0,
+            "SingleReplicaMax": 17,
+            "OracleQPS": 750,
+            "OracleVertical": 30
+        }
+    },
+    "recommendationservice": {
+        "browse": {
+            "max_load": 1354,
+            "slope": 0.02,
+            "intercept": 0,
+            "SingleReplicaMax": 13,
+            "OracleQPS": 750,
+            "OracleVertical": 30
+        },
+        "view": {
+            "max_load": 1354,
+            "slope": 0.02,
+            "intercept": 0,
+            "SingleReplicaMax": 13,
+            "OracleQPS": 750,
+            "OracleVertical": 30
+        },
+        "checkout": {
+            "max_load": 1354,
+            "slope": 0.02,
+            "intercept": 0,
+            "SingleReplicaMax": 13,
+            "OracleQPS": 750,
+            "OracleVertical": 30
+        }
+    },
+    "productcatalogservice-VerticalAll": 53,
+    "currencyservice-VerticalAll": 23.1,
+    "cartservice-VerticalAll": 27,
+    "recommendationservice-VerticalAll": 22.5,
+    "shippingservice-VerticalAll": 15.9
 }

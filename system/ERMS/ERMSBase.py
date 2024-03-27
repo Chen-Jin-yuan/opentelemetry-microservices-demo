@@ -52,7 +52,7 @@ class SharedMS:
         deployment_name=self.msName
         pods_all = v1.list_namespaced_pod(namespace)
         for pod in pods_all.items:
-            if pod.metadata.labels.get('io.kompose.service') == deployment_name:
+            if pod.metadata.labels.get('app') == deployment_name:
                 self.replicaNumber+=1
                 self.pods.append(pod.metadata.name)
                 self.IPs.append(pod.status.pod_ip)
@@ -75,7 +75,10 @@ class SharedMS:
         # time.sleep(0.5)
         self.get_my_pods_ips()
         node_name=MS_node_mapping[self.msName][0].replace("\n","")
-        rpc_set_cpu(node_name,self.uids,tot_resources)
+        try:
+            rpc_set_cpu(node_name,self.uids,tot_resources)
+        except:
+            print("set cpu failed!!!", node_name,self.uids,tot_resources)
         ts=time.time()
         this_vertical_res=list()#为了将最终纵向资源结果记录进入文件(横向副本数量应该不用记录,最后跑完看一下即可)
         for this_uid in self.uids:

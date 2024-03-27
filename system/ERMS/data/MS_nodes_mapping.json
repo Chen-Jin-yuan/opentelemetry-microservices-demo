@@ -1,32 +1,32 @@
 {
-    "srv-composepost": [
-        "cpu-06\n"
-    ],
-    "srv-hometimeline": [
-        "cpu-04\n"
-    ],
-    "srv-media": [
-        "cpu-07\n"
-    ],
-    "srv-nginx": [
+    "frontend": [
         "cpu-03\n"
     ],
-    "srv-poststorage": [
+    "adservice": [
+        "cpu-08\n"
+    ],
+    "checkoutservice": [
         "cpu-04\n"
     ],
-    "srv-socialgraph": [
+    "emailservice": [
         "cpu-04\n"
     ],
-    "srv-text": [
+    "paymentservice": [
+        "cpu-04\n"
+    ],
+    "shippingservice": [
+        "cpu-07\n"
+    ],
+    "recommendationservice": [
+        "cpu-07\n"
+    ],
+    "productcatalogservice": [
         "cpu-08\n"
     ],
-    "srv-uniqueid": [
+    "cartservice": [
         "cpu-08\n"
     ],
-    "srv-user": [
-        "cpu-08\n"
-    ],
-    "srv-usertimeline": [
+    "currencyservice": [
         "cpu-04\n"
     ]
 }

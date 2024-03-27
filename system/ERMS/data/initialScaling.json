@@ -1,22 +1,22 @@
 {
-    "srv-usertimeline": {
+    "productcatalogservice": {
+        "replicas": 6,
+        "totRES": 53
+    },
+    "currencyservice": {
+        "replicas": 3,
+        "totRES": 23.1
+    },
+    "cartservice": {
         "replicas": 4,
-        "totRES": 107
+        "totRES": 27
     },
-    "srv-hometimeline": {
-        "replicas": 4,
-        "totRES": 119
+    "recommendationservice": {
+        "replicas": 3,
+        "totRES": 22.5
     },
-    "srv-poststorage": {
-        "replicas": 1,
-        "totRES": 20
-    },
-    "srv-text": {
-        "replicas": 5,
-        "totRES": 80
-    },
-    "srv-media": {
+    "shippingservice": {
         "replicas": 2,
-        "totRES": 130
+        "totRES": 15.9
     }
 }

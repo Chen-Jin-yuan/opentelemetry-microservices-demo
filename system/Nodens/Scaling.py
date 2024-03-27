@@ -69,7 +69,7 @@ def Horizontal():
                     if(configs[svc][cg]["max_load"]<min_load):
                         min_load=configs[svc][cg]["max_load"]
                     tot_QPS+=configs[svc][cg]["OracleQPS"]
-        replica_nums=max(int(tot_QPS/min_load)+1,3)
+        replica_nums=max(int(tot_QPS/min_load)+1,2) # 
         print(sm.msName,min_load,tot_QPS,replica_nums)
         SVC_Shared_new_nums.append(replica_nums)
     process_list=[]
@@ -90,7 +90,7 @@ def OverProvision(t_queue):#t_queue: 开始排队的时间
     for sm in SVC_Shared:
         print("==============================OverProvision "+sm.msName+" ==============================")
         tot_resources=data[sm.msName+"-VerticalAll"]
-        tot_resources_enlarge=tot_resources*data[sm.msName+"-enlarge"]
+        tot_resources_enlarge=tot_resources
         initial_resources=data2[sm.msName]["totRES"]
         sub_resources=tot_resources_enlarge-initial_resources
         over_resources=sub_resources*(time.time()-t_queue)/10
@@ -105,6 +105,6 @@ def Vertical_back():
     for sm in SVC_Shared:
         print("==============================VerticalBack "+sm.msName+" ==============================")
         tot_resources=data[sm.msName+"-VerticalAll"]
-        print("Actual and Allocate RES",tot_resources,tot_resources*data[sm.msName+"-enlarge"])
-        tot_resources=tot_resources*data[sm.msName+"-enlarge"]
+        print("Actual and Allocate RES",tot_resources,tot_resources)
+        tot_resources=tot_resources
         sm.vertical_actions(tot_resources,"type:NORMAL")

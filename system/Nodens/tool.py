@@ -61,7 +61,7 @@ def get_latency(startTs,endTs,period):
     return [np.mean(latency),np.percentile(latency,50),np.percentile(latency,95),np.percentile(latency,99),len(latency)/period,errorCount]
 
 def latency_analyze(startTime,duration):
-    for svc in ["browse","view","add", "checkout"]:
+    for svc in ["checkout", "browse","view","add"]:
         t_start=int(startTime*1000000)
         t_end=int((startTime+duration)*1000000)
         interval=100000#every 100ms requests

@@ -85,7 +85,7 @@
             "OracleVertical": 30
         },
         "checkout": {
-            "max_load": 1015,
+            "max_load": 990,
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 13,

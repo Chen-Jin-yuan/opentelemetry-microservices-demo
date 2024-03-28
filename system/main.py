@@ -21,7 +21,7 @@ nginxIP=os.popen("kubectl get pods -o wide | grep frontend | awk '{print $6}'").
 print(nginxIP)
 frontend_host = "http://"+nginxIP[0].replace("\n","")+":8080/"
 load_qps = 3000
-load_type = 1
+load_type = 6
     
 
 def load_func():
@@ -41,7 +41,7 @@ if __name__ == "__main__":
 
     #开始新的动态负载
     t_start=time.time()
-    duration=20#预计执行实验时间
+    duration=35#预计执行实验时间
     # loadGenerator
     p_load = Process(target=load_func, args=())
 
@@ -62,17 +62,16 @@ if __name__ == "__main__":
 
     Scaling_Decisions()
     
-    time.sleep(2)
-
-    try:
-        montorMEM(pod_uids)
-    except:
-        pass
 
     # 等待load执行结束,最终调整并记录
     p_load.join()
     
     latency_analyze(t_start,duration)#最后的param代表实验组号码
+
+    try:
+        montorMEM(pod_uids)
+    except:
+        print("monitor mem failed")
 
     # ip = nginxIP[0].replace("\n","")
     # url_c = f"http://{ip}:10001/counter"

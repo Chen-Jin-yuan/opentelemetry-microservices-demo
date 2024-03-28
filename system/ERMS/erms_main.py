@@ -18,7 +18,7 @@ nginxIP=os.popen("kubectl get pods -o wide | grep frontend | awk '{print $6}'").
 print(nginxIP)
 frontend_host = "http://"+nginxIP[0].replace("\n","")+":8080/"
 load_qps = 3000
-load_type = 6
+load_type = 7
     
 
 def load_func():
@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
     #开始新的动态负载
     t_start=time.time()
-    duration=20#预计执行实验时间
+    duration=25#预计执行实验时间
     # loadGenerator
     p_load = Process(target=load_func, args=())
     p_load.start()

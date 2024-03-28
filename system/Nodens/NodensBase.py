@@ -79,6 +79,8 @@ class SharedMS:
             rpc_set_cpu(node_name,self.uids,tot_resources)
         except:
             print("set cpu failed!!!", node_name,self.uids,tot_resources)
+            time.sleep(1)
+            rpc_set_cpu(node_name,self.uids,tot_resources)
         ts=time.time()
         this_vertical_res=list()#为了将最终纵向资源结果记录进入文件(横向副本数量应该不用记录,最后跑完看一下即可)
         for this_uid in self.uids:

@@ -5,8 +5,8 @@
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 14,
-            "OracleQPS": 375,
-            "OracleVertical": 9
+            "OracleQPS": 1125,
+            "OracleVertical": 27
         },
         "view": {
             "max_load": 666,
@@ -21,8 +21,8 @@
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 14,
-            "OracleQPS": 1125,
-            "OracleVertical": 11.7
+            "OracleQPS": 375,
+            "OracleVertical": 3.9
         },
         "checkout": {
             "max_load": 892,
@@ -39,8 +39,8 @@
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 12,
-            "OracleQPS": 375,
-            "OracleVertical": 3.75
+            "OracleQPS": 1125,
+            "OracleVertical": 11.25
         },
         "view": {
             "max_load": 1100,
@@ -65,8 +65,8 @@
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 12,
-            "OracleQPS": 375,
-            "OracleVertical": 2.7
+            "OracleQPS": 1125,
+            "OracleVertical": 8.1
         },
         "view": {
             "max_load": 1388,
@@ -81,8 +81,8 @@
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 12,
-            "OracleQPS": 1125,
-            "OracleVertical": 9.9
+            "OracleQPS": 375,
+            "OracleVertical": 3.3
         },
         "checkout": {
             "max_load": 990,
@@ -117,8 +117,8 @@
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 13,
-            "OracleQPS": 375,
-            "OracleVertical": 3.6
+            "OracleQPS": 1125,
+            "OracleVertical": 10.8
         },
         "view": {
             "max_load": 1354,

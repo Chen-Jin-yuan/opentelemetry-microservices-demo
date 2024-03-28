@@ -69,7 +69,7 @@ def Horizontal():
                     if(configs[svc][cg]["max_load"]<min_load):
                         min_load=configs[svc][cg]["max_load"]
                     tot_QPS+=configs[svc][cg]["OracleQPS"]
-        replica_nums=max(int(tot_QPS/min_load)+1,2) # 
+        replica_nums=max(int(tot_QPS/min_load)+1,3) # 
         print(sm.msName,min_load,tot_QPS,replica_nums)
         SVC_Shared_new_nums.append(replica_nums)
     process_list=[]

@@ -5,8 +5,8 @@
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 14,
-            "OracleQPS": 750,
-            "OracleVertical": 30
+            "OracleQPS": 1125,
+            "OracleVertical": 27
         },
         "view": {
             "max_load": 666,
@@ -14,15 +14,15 @@
             "intercept": 0,
             "SingleReplicaMax": 12,
             "OracleQPS": 750,
-            "OracleVertical": 30
+            "OracleVertical": 13.5
         },
         "add": {
             "max_load": 1346,
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 14,
-            "OracleQPS": 750,
-            "OracleVertical": 30
+            "OracleQPS": 375,
+            "OracleVertical": 3.9
         },
         "checkout": {
             "max_load": 892,
@@ -30,7 +30,7 @@
             "intercept": 0,
             "SingleReplicaMax": 15,
             "OracleQPS": 750,
-            "OracleVertical": 30
+            "OracleVertical": 13.5
         }
     },
     "currencyservice": {
@@ -39,8 +39,8 @@
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 12,
-            "OracleQPS": 750,
-            "OracleVertical": 30
+            "OracleQPS": 1125,
+            "OracleVertical": 11.25
         },
         "view": {
             "max_load": 1100,
@@ -48,7 +48,7 @@
             "intercept": 0,
             "SingleReplicaMax": 11,
             "OracleQPS": 750,
-            "OracleVertical": 30
+            "OracleVertical": 7.5
         },
         "checkout": {
             "max_load": 1481,
@@ -56,7 +56,7 @@
             "intercept": 0,
             "SingleReplicaMax": 16,
             "OracleQPS": 750,
-            "OracleVertical": 30
+            "OracleVertical": 8.1
         }
     },
     "cartservice": {
@@ -65,8 +65,8 @@
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 12,
-            "OracleQPS": 750,
-            "OracleVertical": 30
+            "OracleQPS": 1125,
+            "OracleVertical": 8.1
         },
         "view": {
             "max_load": 1388,
@@ -74,15 +74,15 @@
             "intercept": 0,
             "SingleReplicaMax": 10,
             "OracleQPS": 750,
-            "OracleVertical": 30
+            "OracleVertical": 5.4
         },
         "add": {
             "max_load": 1363,
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 12,
-            "OracleQPS": 750,
-            "OracleVertical": 30
+            "OracleQPS": 375,
+            "OracleVertical": 3.3
         },
         "checkout": {
             "max_load": 990,
@@ -90,7 +90,7 @@
             "intercept": 0,
             "SingleReplicaMax": 13,
             "OracleQPS": 750,
-            "OracleVertical": 30
+            "OracleVertical": 9.6
         }
     },
     "shippingservice": {
@@ -100,7 +100,7 @@
             "intercept": 0,
             "SingleReplicaMax": 13.5,
             "OracleQPS": 750,
-            "OracleVertical": 30
+            "OracleVertical": 5.4
         },
         "checkout": {
             "max_load": 1214,
@@ -108,7 +108,7 @@
             "intercept": 0,
             "SingleReplicaMax": 17,
             "OracleQPS": 750,
-            "OracleVertical": 30
+            "OracleVertical": 10.5
         }
     },
     "recommendationservice": {
@@ -117,8 +117,8 @@
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 13,
-            "OracleQPS": 750,
-            "OracleVertical": 30
+            "OracleQPS": 1125,
+            "OracleVertical": 10.8
         },
         "view": {
             "max_load": 1354,
@@ -126,7 +126,7 @@
             "intercept": 0,
             "SingleReplicaMax": 13,
             "OracleQPS": 750,
-            "OracleVertical": 30
+            "OracleVertical": 7.2
         },
         "checkout": {
             "max_load": 1354,
@@ -134,12 +134,12 @@
             "intercept": 0,
             "SingleReplicaMax": 13,
             "OracleQPS": 750,
-            "OracleVertical": 30
+            "OracleVertical": 7.2
         }
     },
-    "productcatalogservice-VerticalAll": 53,
-    "currencyservice-VerticalAll": 23.1,
-    "cartservice-VerticalAll": 27,
-    "recommendationservice-VerticalAll": 22.5,
-    "shippingservice-VerticalAll": 15.9
+    "productcatalogservice-VerticalAll": 70,
+    "currencyservice-VerticalAll": 33,
+    "cartservice-VerticalAll": 40,
+    "recommendationservice-VerticalAll": 31,
+    "shippingservice-VerticalAll": 19
 }

@@ -33,7 +33,7 @@ def Horizontal():
         if(sm.msName in ["srv-text","srv-media"]):
             print("Actual and Monitor QPSs",tot_QPS,data["Recommend-Tot-QPS"])
             tot_QPS=data["Recommend-Tot-QPS"]
-        replica_nums=max(int(tot_QPS/min_load)+1,2) # 
+        replica_nums=max(int(tot_QPS/min_load)+1,3) # 
         print(sm.msName,min_load,tot_QPS,replica_nums)
         SVC_Shared_new_nums.append(replica_nums)
     process_list=[]

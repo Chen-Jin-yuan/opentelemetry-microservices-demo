@@ -18,7 +18,7 @@ nginxIP=os.popen("kubectl get pods -o wide | grep frontend | awk '{print $6}'").
 print(nginxIP)
 frontend_host = "http://"+nginxIP[0].replace("\n","")+":8080/"
 load_qps = 3000
-load_type = 1
+load_type = 6
     
 
 def load_func():

@@ -1,7 +1,7 @@
 docker pull chenjinyuan/opentelemetry:productcatalog-delphinus
 docker pull chenjinyuan/opentelemetry:recommendation-delphinus
-docker pull chenjinyuan/opentelemetry:checkout-delphinus
-docker pull chenjinyuan/opentelemetry:frontend-delphinus
+docker pull chenjinyuan/opentelemetry:checkout-borrow-disable
+docker pull chenjinyuan/opentelemetry:frontend-borrow-disable
 docker pull chenjinyuan/opentelemetry:currency-delphinus
 docker pull chenjinyuan/opentelemetry:payment
 docker pull chenjinyuan/opentelemetry:cartservice-delphinus

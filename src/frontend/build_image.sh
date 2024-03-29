@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tag="-delphinus"
+tag="-borrow-disable"
 service="frontend"
 name="$service$tag"
 

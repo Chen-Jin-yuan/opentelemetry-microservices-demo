@@ -76,7 +76,7 @@ def Horizontal():
             new_groups.append(replicas)
         print("new_groups=",new_groups)
         ###算出来新的new_groups就借用
-        borrow_vertical(new_groups,sm)
+        # borrow_vertical(new_groups,sm)
         SVC_Shared_new_groups.append(new_groups)
         # sm.horizontal_udpate_groups(new_groups)
         # sm.get_my_pods_ips()
@@ -123,21 +123,21 @@ def Vertical():
             print("RealQPS, OracleQPS, Montoring_Accuracy, Oracle_Vertical",real_QPS[svc_group],configs[svc_group]["OracleQPS"],Accuracy_rate,configs[svc_group]["OracleVertical"])
             ######!!!!!!Orcalce vertical resources!!!!!!######
             tot=tot_resources
-            resources_list=list()#决策分给每个pod的资源量
-            full_replica_number=int(real_QPS[svc_group]/max_load)#需要分配满资源的副本数量
-            last_pod_load=real_QPS[svc_group]%max_load#最后一个副本需要承担的负载量
-            last_replica_number=last_pod_load/max_load#换算为副本数量
-            resource_one=tot_resources/(full_replica_number+last_replica_number)#一个副本的资源量
-            while(tot_resources>resource_one):
-                resources_list.append(resource_one)
-                tot_resources-=resource_one
-            resources_list.append(tot_resources)  
-
-            # dis-borrow
             # resources_list=list()#决策分给每个pod的资源量
             # full_replica_number=int(real_QPS[svc_group]/max_load)#需要分配满资源的副本数量
-            # for i in range(full_replica_number+1):
-            #     resources_list.append(tot_resources/(full_replica_number+1))
+            # last_pod_load=real_QPS[svc_group]%max_load#最后一个副本需要承担的负载量
+            # last_replica_number=last_pod_load/max_load#换算为副本数量
+            # resource_one=tot_resources/(full_replica_number+last_replica_number)#一个副本的资源量
+            # while(tot_resources>resource_one):
+            #     resources_list.append(resource_one)
+            #     tot_resources-=resource_one
+            # resources_list.append(tot_resources)  
+
+            # dis-borrow
+            resources_list=list()#决策分给每个pod的资源量
+            full_replica_number=int(real_QPS[svc_group]/max_load)#需要分配满资源的副本数量
+            for i in range(full_replica_number+1):
+                resources_list.append(tot_resources/(full_replica_number+1))
             print(sm.msName,svc_group,slope,intercept,real_QPS[svc_group],tot,resources_list)
             #####Here to conduct vertical actions##### 根据resource_list进行顺序分配
             sm.vertical_update_1(counter,resources_list)

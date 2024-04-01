@@ -18,7 +18,7 @@ spec:
       nodeName: cpu-03
       containers:
         - name: server
-          image: chenjinyuan/opentelemetry:frontend-delphinus
+          image: chenjinyuan/opentelemetry:frontend-borrow-disable
           ports:
           - containerPort: 8080
           - containerPort: 10001

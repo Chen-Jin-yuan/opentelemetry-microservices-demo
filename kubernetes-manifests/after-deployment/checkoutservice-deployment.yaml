@@ -16,7 +16,7 @@ spec:
       nodeName: cpu-04
       containers:
         - name: server
-          image: chenjinyuan/opentelemetry:checkout-delphinus
+          image: chenjinyuan/opentelemetry:checkout-borrow-disable
           ports:
           - containerPort: 5050
           - containerPort: 10001

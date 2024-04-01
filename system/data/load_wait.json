@@ -1,1 +1,64 @@
-{"cartservice": {"real": {"add": 570.940530496755, "browse": 934.7907849492165, "view": 553.0364720491215, "checkout": 1886.2920244495574}, "wait": {"add": 0, "browse": 0, "view": 0, "checkout": 0}}, "currencyservice": {"real": {"browse": 1872.704355176239, "checkout": 1985.0865071331775, "view": 1105.1243119871676}, "wait": {"browse": 0, "checkout": 0, "view": 1}}, "productcatalogservice": {"real": {"add": 567.1953536691418, "browse": 2811.506397072014, "checkout": 2040.7891750045796, "view": 1109.7213899566723}, "wait": {"add": 2, "browse": 62, "checkout": 44, "view": 19}}, "recommendationservice": {"real": {"browse": 940.0492980611627, "checkout": 1008.4888660046632, "view": 554.4798716817905}, "wait": {"browse": 3, "checkout": 0, "view": 1}}, "shippingservice": {"real": {"view": 554.934817496828, "checkout": 1884.271323662589}, "wait": {"view": 0, "checkout": 1}}}
+{
+    "cartservice": {
+        "real": {
+            "browse": 901.6517909110172,
+            "view": 730.0791984683468,
+            "add": 386.1378530612303,
+            "checkout": 1504.7433861561346
+        },
+        "wait": {
+            "browse": 19,
+            "view": 0,
+            "add": 0,
+            "checkout": 0
+        }
+    },
+    "currencyservice": {
+        "real": {
+            "browse": 1795.5726778689566,
+            "view": 1461.7624680900835,
+            "checkout": 1501.7480772471474
+        },
+        "wait": {
+            "browse": 0,
+            "view": 0,
+            "checkout": 1
+        }
+    },
+    "productcatalogservice": {
+        "real": {
+            "browse": 2739.5502839053524,
+            "view": 1460.8813015539433,
+            "add": 385.31142171976967,
+            "checkout": 1508.0257553214112
+        },
+        "wait": {
+            "browse": 4493,
+            "view": 12,
+            "add": 0,
+            "checkout": 23
+        }
+    },
+    "recommendationservice": {
+        "real": {
+            "browse": 894.6844556017452,
+            "view": 729.9893179320597,
+            "checkout": 752.0680139240103
+        },
+        "wait": {
+            "browse": 4,
+            "view": 0,
+            "checkout": 0
+        }
+    },
+    "shippingservice": {
+        "real": {
+            "view": 731.8569574781257,
+            "checkout": 1505.2222200072495
+        },
+        "wait": {
+            "view": 1,
+            "checkout": 0
+        }
+    }
+}

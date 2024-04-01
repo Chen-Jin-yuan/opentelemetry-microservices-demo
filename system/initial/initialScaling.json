@@ -1,7 +1,7 @@
 {
     "productcatalogservice": {
         "grouped": [2,2,1,1],
-        "vertical":[[10, 8],[10, 4],[8],[13]]
+        "vertical":[[10, 10],[7, 7],[8],[13]]
     },
     "currencyservice": {
         "grouped": [1,1,1],

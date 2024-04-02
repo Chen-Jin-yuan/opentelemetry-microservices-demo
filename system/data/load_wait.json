@@ -1,13 +1,13 @@
 {
     "cartservice": {
         "real": {
-            "browse": 901.6517909110172,
-            "view": 730.0791984683468,
-            "add": 386.1378530612303,
-            "checkout": 1504.7433861561346
+            "browse": 1028.5895793396694,
+            "view": 556.870838021612,
+            "add": 561.8446754458852,
+            "checkout": 1505.8790185729124
         },
         "wait": {
-            "browse": 19,
+            "browse": 9,
             "view": 0,
             "add": 0,
             "checkout": 0
@@ -15,49 +15,49 @@
     },
     "currencyservice": {
         "real": {
-            "browse": 1795.5726778689566,
-            "view": 1461.7624680900835,
-            "checkout": 1501.7480772471474
+            "browse": 2056.1531456040184,
+            "view": 1113.7993437204975,
+            "checkout": 1505.8169341621226
         },
         "wait": {
             "browse": 0,
             "view": 0,
-            "checkout": 1
+            "checkout": 0
         }
     },
     "productcatalogservice": {
         "real": {
-            "browse": 2739.5502839053524,
-            "view": 1460.8813015539433,
-            "add": 385.31142171976967,
-            "checkout": 1508.0257553214112
+            "browse": 2813.065679015109,
+            "view": 1114.4458035439197,
+            "add": 561.8970899538771,
+            "checkout": 1509.4644303221144
         },
         "wait": {
-            "browse": 4493,
-            "view": 12,
+            "browse": 2053,
+            "view": 0,
             "add": 0,
-            "checkout": 23
+            "checkout": 0
         }
     },
     "recommendationservice": {
         "real": {
-            "browse": 894.6844556017452,
-            "view": 729.9893179320597,
-            "checkout": 752.0680139240103
+            "browse": 1031.9996547361895,
+            "view": 556.9774543680282,
+            "checkout": 754.306609629844
         },
         "wait": {
-            "browse": 4,
+            "browse": 1088,
             "view": 0,
             "checkout": 0
         }
     },
     "shippingservice": {
         "real": {
-            "view": 731.8569574781257,
-            "checkout": 1505.2222200072495
+            "view": 556.9719864325933,
+            "checkout": 1502.2330148353376
         },
         "wait": {
-            "view": 1,
+            "view": 0,
             "checkout": 0
         }
     }

@@ -6,23 +6,23 @@
             "intercept": 0,
             "SingleReplicaMax": 14,
             "OracleQPS": 1125,
-            "OracleVertical": 32
+            "OracleVertical": 40
         },
         "view": {
-            "max_load": 666,
+            "max_load": 520,
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 12,
-            "OracleQPS": 750,
-            "OracleVertical": 13.5
+            "OracleQPS": 563,
+            "OracleVertical": 12
         },
         "add": {
             "max_load": 1346,
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 14,
-            "OracleQPS": 375,
-            "OracleVertical": 3.9
+            "OracleQPS": 563,
+            "OracleVertical": 5.9
         },
         "checkout": {
             "max_load": 892,
@@ -30,7 +30,7 @@
             "intercept": 0,
             "SingleReplicaMax": 15,
             "OracleQPS": 750,
-            "OracleVertical": 13.5
+            "OracleVertical": 15
         }
     },
     "currencyservice": {
@@ -47,8 +47,8 @@
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 11,
-            "OracleQPS": 750,
-            "OracleVertical": 7.5
+            "OracleQPS": 563,
+            "OracleVertical": 5.7
         },
         "checkout": {
             "max_load": 1481,
@@ -73,16 +73,16 @@
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 10,
-            "OracleQPS": 750,
-            "OracleVertical": 5.4
+            "OracleQPS": 563,
+            "OracleVertical": 4.1
         },
         "add": {
             "max_load": 1363,
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 12,
-            "OracleQPS": 375,
-            "OracleVertical": 3.3
+            "OracleQPS": 563,
+            "OracleVertical": 5
         },
         "checkout": {
             "max_load": 990,
@@ -99,8 +99,8 @@
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 13.5,
-            "OracleQPS": 750,
-            "OracleVertical": 5.4
+            "OracleQPS": 563,
+            "OracleVertical": 4.1
         },
         "checkout": {
             "max_load": 1214,
@@ -125,8 +125,8 @@
             "slope": 0.02,
             "intercept": 0,
             "SingleReplicaMax": 13,
-            "OracleQPS": 750,
-            "OracleVertical": 7.2
+            "OracleQPS": 563,
+            "OracleVertical": 5.4
         },
         "checkout": {
             "max_load": 1354,
